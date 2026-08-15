@@ -176,7 +176,7 @@
     section{padding:68px 0;}
   }
 </style>
-</head>
+<link rel="canonical" href="https://maysimoveis.com/lp/zabaleta-dom-joaquim/"></head>
 <body>
 
 <header>
@@ -398,8 +398,25 @@
     var nome = document.getElementById('nome').value.trim();
     var telefone = document.getElementById('telefone').value.trim();
     var msg = 'Olá, quero entrar na lista de interessados do novo empreendimento da Zabaleta na Av. Dom Joaquim.\nNome: ' + nome + '\nTelefone: ' + telefone;
-    window.open('https://wa.me/5553981041499?text=' + encodeURIComponent(msg), '_blank');
+    var url = 'https://wa.me/5553981041499?text=' + encodeURIComponent(msg);
+    if (window.innerWidth < 768) { window.location.href = url; } else { window.open(url, '_blank'); }
   });
+</script>
+
+<script>
+(function(){
+  var leadId = new URLSearchParams(location.search).get('lead');
+  if (!leadId) return;
+  fetch('https://xcwgsijqwaiaomatkrqn.supabase.co/rest/v1/campanha_lp_visitas', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhjd2dzaWpxd2FpYW9tYXRrcnFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDAzMTcsImV4cCI6MjA5NzUxNjMxN30.ZEnlwxlHDpuP8m0QlqSHpvbNyIN3AsfnCxPHVIK9IpA',
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhjd2dzaWpxd2FpYW9tYXRrcnFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5NDAzMTcsImV4cCI6MjA5NzUxNjMxN30.ZEnlwxlHDpuP8m0QlqSHpvbNyIN3AsfnCxPHVIK9IpA'
+    },
+    body: JSON.stringify({ lead_id: leadId, user_agent: navigator.userAgent })
+  }).catch(function(){});
+})();
 </script>
 
 </body>
