@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Ficha de Interesse · Milano</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 12mm; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    font-family:'Inter',sans-serif;
+    background:#EDE9E0;
+    color:#26292E;
+    font-size:16px;
+    line-height:1.55;
+    padding:20px 14px 60px;
+  }
+  h1,h2,h3{ font-family:'Montserrat',sans-serif; }
+  .card{
+    max-width:640px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:14px;
+    padding:28px 22px 34px;
+    box-shadow:0 10px 34px rgba(23,26,31,0.10);
+  }
+  .logos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+    margin-bottom:14px;
+  }
+  .logos img.maysonnave{ height:38px; }
+  .logos img.zabaleta{ height:26px; }
+  .empreendimento{
+    text-align:center;
+    font-size:1.5rem;
+    letter-spacing:0.1em;
+    color:#7A2E2E;
+    font-weight:800;
+    margin-bottom:4px;
+  }
+  .eyebrow{
+    text-align:center;
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:#8a8a8a;
+    margin-bottom:18px;
+  }
+  .intro{
+    background:#F6F2EA;
+    border-left:3px solid #7A2E2E;
+    border-radius:6px;
+    padding:14px 16px;
+    font-size:0.92rem;
+    color:#3d3d3d;
+    margin-bottom:26px;
+  }
+  h2.secao{
+    font-size:0.98rem;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    font-weight:700;
+    color:#7A2E2E;
+    border-bottom:1.5px solid #e7e0d2;
+    padding-bottom:6px;
+    margin:30px 0 16px;
+  }
+  h2.secao:first-of-type{ margin-top:0; }
+  label{
+    display:block;
+    font-size:0.82rem;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#444;
+  }
+  .campo{ margin-bottom:16px; }
+  input[type="text"], input[type="tel"], input[type="email"], input[type="date"]{
+    width:100%;
+    font-family:'Inter',sans-serif;
+    font-size:1rem;
+    padding:12px 13px;
+    border:1.5px solid #d8d2c2;
+    border-radius:8px;
+    background:#FDFCFA;
+    color:#26292E;
+  }
+  input:focus{ outline:none; border-color:#7A2E2E; }
+  .linha2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .linha3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+  @media (max-width:480px){
+    .linha2, .linha3{ grid-template-columns:1fr; }
+  }
+  fieldset{ border:none; margin-bottom:16px; }
+  legend{
+    font-size:0.82rem;
+    font-weight:600;
+    color:#444;
+    margin-bottom:10px;
+    padding:0;
+  }
+  .opcao-tocavel{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:11px 13px;
+    border:1.5px solid #e2ddd0;
+    border-radius:8px;
+    margin-bottom:9px;
+    background:#FDFCFA;
+  }
+  .opcao-tocavel input[type="radio"]{
+    width:19px; height:19px; accent-color:#7A2E2E; flex-shrink:0;
+  }
+  .opcao-tocavel span{ font-size:0.94rem; }
+  .imobiliaria-fixa{
+    font-size:0.94rem;
+    padding:12px 13px;
+    background:#F6F2EA;
+    border-radius:8px;
+    color:#444;
+  }
+  .obs{
+    font-size:0.78rem;
+    color:#666;
+    margin-top:24px;
+    line-height:1.6;
+  }
+  .obs b{ color:#000; }
+  .btn-pdf{
+    display:block;
+    width:100%;
+    margin-top:30px;
+    padding:16px;
+    border:none;
+    border-radius:9px;
+    background:#7A2E2E;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:0.98rem;
+    letter-spacing:0.02em;
+    cursor:pointer;
+  }
+  .btn-pdf:active{ background:#5f2323; }
+  .instrucoes-pdf{
+    margin-top:16px;
+    font-size:0.82rem;
+    color:#555;
+    background:#F6F2EA;
+    border-radius:8px;
+    padding:14px 16px;
+  }
+  .instrucoes-pdf b{ display:block; margin-bottom:4px; color:#26292E; }
+  .instrucoes-pdf p{ margin-bottom:8px; }
+  .instrucoes-pdf p:last-child{ margin-bottom:0; }
+
+  /* ===== ÁREA DE IMPRESSÃO (só existe no PDF gerado) ===== */
+  .print-page{ display:none; }
+
+  @media print{
+    body{ background:#fff; padding:0; font-size:11.5px; line-height:1.35; }
+    .card{ box-shadow:none; border-radius:0; padding:0; max-width:none; }
+    .screen-only{ display:none !important; }
+    .print-page{ display:block; }
+
+    .print-page .logos{ margin-bottom:10px; }
+    .print-page .logos img.maysonnave{ height:52px; }
+    .print-page .logos img.zabaleta{ height:32px; }
+    .print-page .empreendimento{ font-size:1.6rem; }
+
+    .print-titulo{
+      text-align:center;
+      font-family:'Montserrat',sans-serif;
+      font-size:1.05rem;
+      text-transform:uppercase;
+      letter-spacing:0.05em;
+      font-weight:700;
+      margin:14px 0 20px;
+    }
+    .print-secao{
+      font-size:0.8rem;
+      text-transform:uppercase;
+      letter-spacing:0.03em;
+      font-weight:700;
+      border-bottom:1px solid #26292E;
+      padding-bottom:3px;
+      margin:18px 0 10px;
+    }
+    .print-campo{ display:flex; gap:6px; margin-bottom:9px; align-items:baseline; }
+    .print-campo .rot{ font-weight:600; white-space:nowrap; }
+    .print-campo .val{ flex:1; border-bottom:1px solid #26292E; min-height:14px; padding-left:4px; }
+    .print-tripla, .print-dupla{ display:flex; gap:22px; }
+    .print-tripla .print-campo, .print-dupla .print-campo{ flex:1; }
+    .print-grid3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:0 24px; margin-top:16px; }
+    .print-grid3 h3{ font-size:0.74rem; text-transform:uppercase; font-weight:700; margin-bottom:7px; }
+    .print-marca{ display:flex; align-items:baseline; gap:6px; font-size:0.84rem; margin-bottom:6px; }
+    .print-marca .caixa{
+      width:11px; height:11px; border:1.2px solid #26292E; display:inline-block; flex-shrink:0; position:relative; top:1px;
+    }
+    .print-marca.marcado .caixa::after{
+      content:"X"; position:absolute; left:1px; top:-4px; font-size:9px; font-weight:800;
+    }
+    .print-obs{ font-size:0.7rem; color:#333; margin-top:14px; line-height:1.5; }
+    .print-assinaturas{ display:flex; justify-content:space-between; gap:50px; margin-top:26px; }
+    .print-assinatura{ flex:1; text-align:center; border-top:1px solid #26292E; padding-top:4px; font-size:0.76rem; font-weight:600; }
+    .print-zabaleta{ margin-top:16px; border-top:1px solid #26292E; padding-top:8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- ===================== TELA (preenchimento) ===================== -->
+  <div class="screen-only">
+
+    <div class="logos">
+      <img class="maysonnave" src="../img/logo-maysonnave.png" alt="Maysonnave Imóveis">
+      <img class="zabaleta" src="../img/logo-zabaleta.png" alt="Construtora Zabaleta">
+    </div>
+    <div class="empreendimento">MILANO</div>
+    <p class="eyebrow">Pré-lançamento · Av. Dom Joaquim · Pelotas</p>
+
+    <div class="intro">
+      Preencha os dados abaixo pelo celular. No final, toque em <b>Baixar PDF</b> e siga a instrução da tela
+      seguinte pra salvar o arquivo. Com o PDF salvo, acesse
+      <b>gov.br/assinatura-eletronica</b> pra assinar digitalmente e envie o arquivo assinado ao seu corretor.
+    </div>
+
+    <form id="ficha" onsubmit="return false;">
+
+      <h2 class="secao">Dados do Cliente</h2>
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" data-print="nome-print">
+      </div>
+      <div class="linha2">
+        <div class="campo">
+          <label for="rg">RG</label>
+          <input type="text" id="rg" data-print="rg-print">
+        </div>
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" inputmode="numeric" data-print="cpf-print">
+        </div>
+      </div>
+      <div class="linha2">
+        <div class="campo">
+          <label for="nasc">Data de nascimento</label>
+          <input type="date" id="nasc" data-print="nasc-print">
+        </div>
+        <div class="campo">
+          <label for="estadocivil">Estado civil</label>
+          <input type="text" id="estadocivil" data-print="estadocivil-print">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="profissao">Profissão</label>
+        <input type="text" id="profissao" data-print="profissao-print">
+      </div>
+      <div class="campo">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" data-print="endereco-print">
+      </div>
+      <div class="linha3">
+        <div class="campo">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" inputmode="numeric" data-print="cep-print">
+        </div>
+        <div class="campo">
+          <label for="cidadeuf">Cidade/UF</label>
+          <input type="text" id="cidadeuf" data-print="cidadeuf-print">
+        </div>
+        <div class="campo">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro" data-print="bairro-print">
+        </div>
+      </div>
+      <div class="linha2">
+        <div class="campo">
+          <label for="telefone">Telefone celular</label>
+          <input type="tel" id="telefone" data-print="telefone-print">
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" data-print="email-print">
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>Relação com a Zabaleta</legend>
+        <label class="opcao-tocavel"><input type="radio" name="relacao" value="Primeira compra Zabaleta"><span>Primeira compra Zabaleta</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="relacao" value="Já é cliente Zabaleta"><span>Já é cliente Zabaleta</span></label>
+      </fieldset>
+
+      <h2 class="secao">Dados do Corretor</h2>
+      <div class="campo">
+        <label for="corretornome">Nome do corretor</label>
+        <input type="text" id="corretornome" value="Rodrigo Maysonnave Fernandes" data-print="corretornome-print">
+      </div>
+      <div class="linha2">
+        <div class="campo">
+          <label>Imobiliária</label>
+          <div class="imobiliaria-fixa">Maysonnave Imóveis</div>
+        </div>
+        <div class="campo">
+          <label for="creci">CRECI do corretor</label>
+          <input type="text" id="creci" value="CRECI/RS 61580" data-print="creci-print">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="corretortelefone">Telefone celular do corretor</label>
+        <input type="tel" id="corretortelefone" data-print="corretortelefone-print">
+      </div>
+
+      <fieldset>
+        <legend>Unidade de interesse</legend>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="112,51 m²"><span>112,51 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="125,08 m²"><span>125,08 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="130,16 m²"><span>130,16 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="131,09 m²"><span>131,09 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="163,42 m²"><span>163,42 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="170,43 m²"><span>170,43 m²</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="Cobertura Horizontal (227 m²)"><span>Cobertura Horizontal (227 m²)</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="unidade" value="Cobertura Duplex (267 m²)"><span>Cobertura Duplex (267 m²)</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Andar de preferência</legend>
+        <label class="opcao-tocavel"><input type="radio" name="andar" value="Baixo (04 ao 07)"><span>Baixo (04 ao 07)</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="andar" value="Intermediário (08 ao 11)"><span>Intermediário (08 ao 11)</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="andar" value="Alto (12 ao 15)"><span>Alto (12 ao 15)</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Motivo da compra</legend>
+        <label class="opcao-tocavel"><input type="radio" name="motivo" value="Investimento"><span>Investimento</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="motivo" value="Utilização Própria"><span>Utilização Própria</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Desejo de compra</legend>
+        <label class="opcao-tocavel"><input type="radio" name="desejo" value="01 Unidade"><span>01 Unidade</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="desejo" value="Mais de 01 unidade"><span>Mais de 01 unidade</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Condições de pagamento</legend>
+        <label class="opcao-tocavel"><input type="radio" name="pagamento" value="À vista"><span>À vista</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="pagamento" value="Durante a obra"><span>Durante a obra</span></label>
+        <label class="opcao-tocavel"><input type="radio" name="pagamento" value="Durante a obra com financiamento na entrega"><span>Durante a obra com financiamento na entrega</span></label>
+      </fieldset>
+
+      <p class="obs">
+        Obs.: A ficha de interesse só passa a ser válida após análise da Zabaleta. Seu preenchimento não configura
+        compromisso de compra. * Somente serão aceitas fichas com <b>documento com foto do cliente</b>.
+      </p>
+
+      <button type="button" class="btn-pdf" onclick="gerarPDF()">Baixar PDF para assinatura</button>
+
+      <div class="instrucoes-pdf">
+        <b>Depois de tocar no botão:</b>
+        <p><b>Android (Chrome):</b> na tela de impressão, toque em "Salvar como PDF" no campo de destino/impressora e depois em salvar.</p>
+        <p><b>iPhone (Safari):</b> na pré-visualização, afaste os dedos sobre a página (pinça pra fora) pra abrir o PDF em tela cheia. Toque no ícone de compartilhar e escolha "Salvar em Arquivos".</p>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- ===================== IMPRESSÃO (gerado ao clicar em Baixar PDF) ===================== -->
+  <div class="print-page">
+    <div class="logos">
+      <img class="maysonnave" src="../img/logo-maysonnave.png" alt="Maysonnave Imóveis">
+      <img class="zabaleta" src="../img/logo-zabaleta.png" alt="Construtora Zabaleta">
+    </div>
+    <div class="empreendimento">MILANO</div>
+    <p class="eyebrow">Pré-lançamento · Av. Dom Joaquim · Pelotas</p>
+
+    <div class="print-titulo">Ficha de Interesse</div>
+
+    <div class="print-secao">Dados do Cliente</div>
+    <div class="print-campo"><span class="rot">Nome:</span><span class="val" id="nome-print"></span></div>
+    <div class="print-tripla">
+      <div class="print-campo"><span class="rot">RG:</span><span class="val" id="rg-print"></span></div>
+      <div class="print-campo"><span class="rot">CPF:</span><span class="val" id="cpf-print"></span></div>
+      <div class="print-campo"><span class="rot">Nasc.:</span><span class="val" id="nasc-print"></span></div>
+    </div>
+    <div class="print-dupla">
+      <div class="print-campo"><span class="rot">Profissão:</span><span class="val" id="profissao-print"></span></div>
+      <div class="print-campo"><span class="rot">Est. Civil:</span><span class="val" id="estadocivil-print"></span></div>
+    </div>
+    <div class="print-campo"><span class="rot">Endereço:</span><span class="val" id="endereco-print"></span></div>
+    <div class="print-tripla">
+      <div class="print-campo"><span class="rot">Cep:</span><span class="val" id="cep-print"></span></div>
+      <div class="print-campo"><span class="rot">Cidade/UF:</span><span class="val" id="cidadeuf-print"></span></div>
+      <div class="print-campo"><span class="rot">Bairro:</span><span class="val" id="bairro-print"></span></div>
+    </div>
+    <div class="print-dupla">
+      <div class="print-campo"><span class="rot">Telefone:</span><span class="val" id="telefone-print"></span></div>
+      <div class="print-campo"><span class="rot">E-mail:</span><span class="val" id="email-print"></span></div>
+    </div>
+    <div style="margin-top:8px;">
+      <span class="print-marca" id="marca-relacao-primeira"><span class="caixa"></span> Primeira compra Zabaleta</span>
+      &nbsp;&nbsp;
+      <span class="print-marca" id="marca-relacao-cliente"><span class="caixa"></span> Já é cliente Zabaleta</span>
+    </div>
+
+    <div class="print-secao">Dados do Corretor</div>
+    <div class="print-campo"><span class="rot">Nome:</span><span class="val" id="corretornome-print"></span></div>
+    <div class="print-dupla">
+      <div class="print-campo"><span class="rot">Imobiliária:</span><span class="val">Maysonnave Imóveis</span></div>
+      <div class="print-campo"><span class="rot">CRECI:</span><span class="val" id="creci-print"></span></div>
+    </div>
+    <div class="print-campo"><span class="rot">Telefone:</span><span class="val" id="corretortelefone-print"></span></div>
+
+    <div class="print-grid3">
+      <div>
+        <h3>Unidade de interesse</h3>
+        <div class="print-marca" id="m-unidade-1"><span class="caixa"></span> 112,51 m²</div>
+        <div class="print-marca" id="m-unidade-2"><span class="caixa"></span> 125,08 m²</div>
+        <div class="print-marca" id="m-unidade-3"><span class="caixa"></span> 130,16 m²</div>
+        <div class="print-marca" id="m-unidade-4"><span class="caixa"></span> 131,09 m²</div>
+        <div class="print-marca" id="m-unidade-5"><span class="caixa"></span> 163,42 m²</div>
+        <div class="print-marca" id="m-unidade-6"><span class="caixa"></span> 170,43 m²</div>
+        <div class="print-marca" id="m-unidade-7"><span class="caixa"></span> Cobertura Horizontal (227 m²)</div>
+        <div class="print-marca" id="m-unidade-8"><span class="caixa"></span> Cobertura Duplex (267 m²)</div>
+      </div>
+      <div>
+        <h3>Andar</h3>
+        <div class="print-marca" id="m-andar-1"><span class="caixa"></span> Baixo (04 ao 07)</div>
+        <div class="print-marca" id="m-andar-2"><span class="caixa"></span> Intermediário (08 ao 11)</div>
+        <div class="print-marca" id="m-andar-3"><span class="caixa"></span> Alto (12 ao 15)</div>
+        <h3 style="margin-top:16px;">Motivo</h3>
+        <div class="print-marca" id="m-motivo-1"><span class="caixa"></span> Investimento</div>
+        <div class="print-marca" id="m-motivo-2"><span class="caixa"></span> Utilização Própria</div>
+      </div>
+      <div>
+        <h3>Desejo de compra</h3>
+        <div class="print-marca" id="m-desejo-1"><span class="caixa"></span> 01 Unidade</div>
+        <div class="print-marca" id="m-desejo-2"><span class="caixa"></span> Mais de 01 unidade</div>
+        <h3 style="margin-top:16px;">Pagamento</h3>
+        <div class="print-marca" id="m-pagamento-1"><span class="caixa"></span> À vista</div>
+        <div class="print-marca" id="m-pagamento-2"><span class="caixa"></span> Durante a obra</div>
+        <div class="print-marca" id="m-pagamento-3"><span class="caixa"></span> Com financiamento na entrega</div>
+      </div>
+    </div>
+
+    <p class="print-obs">
+      Obs.: A ficha de interesse só passa a ser válida após análise da Zabaleta. Seu preenchimento não configura
+      compromisso de compra. * Somente serão aceitas fichas com <b>documento com foto do cliente</b>.
+      Preenchida digitalmente em <span id="data-preenchimento"></span>, assinatura eletrônica via gov.br.
+    </p>
+
+    <div class="print-assinaturas">
+      <div class="print-assinatura">Assinatura do Cliente</div>
+      <div class="print-assinatura">Assinatura do Corretor</div>
+    </div>
+
+    <div class="print-zabaleta">
+      <div class="print-secao" style="margin-top:0;">Preenchimento da Zabaleta</div>
+      <div class="print-tripla">
+        <div class="print-campo"><span class="rot">Responsável:</span><span class="val"></span></div>
+        <div class="print-campo"><span class="rot">Data Receb.:</span><span class="val"></span></div>
+        <div class="print-campo"><span class="rot">Horário:</span><span class="val"></span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function gerarPDF(){
+  // copia os campos de texto pro layout de impressão
+  document.querySelectorAll('[data-print]').forEach(function(input){
+    var alvo = document.getElementById(input.getAttribute('data-print'));
+    if(!alvo) return;
+    var valor = input.value || '';
+    if(input.type === 'date' && valor){
+      var partes = valor.split('-');
+      valor = partes[2] + '/' + partes[1] + '/' + partes[0];
+    }
+    alvo.textContent = valor;
+  });
+
+  // marca as opções escolhidas (radio)
+  function marcar(nomeGrupo, valorEsperado, idMarca){
+    var el = document.getElementById(idMarca);
+    if(!el) return;
+    el.classList.remove('marcado');
+    var checked = document.querySelector('input[name="'+nomeGrupo+'"]:checked');
+    if(checked && checked.value === valorEsperado) el.classList.add('marcado');
+  }
+
+  marcar('relacao','Primeira compra Zabaleta','marca-relacao-primeira');
+  marcar('relacao','Já é cliente Zabaleta','marca-relacao-cliente');
+
+  var unidades = ['112,51 m²','125,08 m²','130,16 m²','131,09 m²','163,42 m²','170,43 m²','Cobertura Horizontal (227 m²)','Cobertura Duplex (267 m²)'];
+  unidades.forEach(function(v,i){ marcar('unidade', v, 'm-unidade-'+(i+1)); });
+
+  var andares = ['Baixo (04 ao 07)','Intermediário (08 ao 11)','Alto (12 ao 15)'];
+  andares.forEach(function(v,i){ marcar('andar', v, 'm-andar-'+(i+1)); });
+
+  var motivos = ['Investimento','Utilização Própria'];
+  motivos.forEach(function(v,i){ marcar('motivo', v, 'm-motivo-'+(i+1)); });
+
+  var desejos = ['01 Unidade','Mais de 01 unidade'];
+  desejos.forEach(function(v,i){ marcar('desejo', v, 'm-desejo-'+(i+1)); });
+
+  var pagamentos = ['À vista','Durante a obra','Durante a obra com financiamento na entrega'];
+  pagamentos.forEach(function(v,i){ marcar('pagamento', v, 'm-pagamento-'+(i+1)); });
+
+  var hoje = new Date();
+  document.getElementById('data-preenchimento').textContent =
+    String(hoje.getDate()).padStart(2,'0') + '/' + String(hoje.getMonth()+1).padStart(2,'0') + '/' + hoje.getFullYear();
+
+  window.print();
+}
+window.addEventListener('beforeprint', function(){
+  if(!document.getElementById('nome-print').textContent){ gerarPDF(); }
+});
+</script>
+
+</body>
+</html>
