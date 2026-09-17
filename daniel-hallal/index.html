@@ -62,6 +62,12 @@
   .section-dark .eyebrow{color:var(--champ);}
   .section-alt{background:var(--alt);}
 
+  /* VÍDEO DO LANÇAMENTO */
+  .video-intro{max-width:640px;margin:0 auto 40px;text-align:center;}
+  .video-intro h2{font-size:1.9rem;margin-top:12px;}
+  .video-frame{width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(23,26,31,0.28);background:#000;}
+  .video-frame video{width:100%;display:block;}
+
   .two-col{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;}
   .two-col h2{font-size:1.95rem;margin:14px 0 20px;}
   .two-col p{margin-bottom:14px;font-size:0.99rem;}
@@ -202,6 +208,20 @@
     <h1>Onde o sol te visita todas as manhãs. E fica o dia inteiro.</h1>
     <p class="sub">Todos os apartamentos com frente norte. 3 dormitórios, de 100 a 180 m², na Av. Dom Joaquim.</p>
     <div class="hero-badge">Construtora Zabaleta · desde 1982</div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="video-intro">
+      <p class="eyebrow">Vídeo do lançamento</p>
+      <h2>Veja o pré-lançamento em vídeo.</h2>
+    </div>
+    <div class="video-frame">
+      <video controls playsinline preload="metadata" poster="../img/anuncio-zabaleta-poster.jpg">
+        <source src="../img/anuncio-zabaleta.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
 </section>
 
