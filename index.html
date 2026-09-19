@@ -65,8 +65,9 @@
   /* VÍDEO DO LANÇAMENTO */
   .video-intro{max-width:640px;margin:0 auto 40px;text-align:center;}
   .video-intro h2{font-size:1.9rem;margin-top:12px;}
-  .video-frame{width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(23,26,31,0.28);background:#000;}
+  .video-frame{position:relative;width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(23,26,31,0.28);background:#000;}
   .video-frame video{width:100%;display:block;}
+  .video-mute-toggle{position:absolute;bottom:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(23,26,31,0.55);border:1px solid rgba(255,255,255,0.3);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;z-index:2;}
 
   .two-col{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;}
   .two-col h2{font-size:1.95rem;margin:14px 0 20px;}
@@ -214,14 +215,15 @@
 <section class="section-dark">
   <div class="wrap">
     <div class="video-intro">
-      <p class="eyebrow">A obra já começou</p>
-      <h2>A fachada nasceu. Por enquanto, só ela sabe qual é.</h2>
-      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">O prédio já está de pé na Dom Joaquim, coberto até a revelação oficial. Quem está na lista acompanha os próximos passos em primeira mão.</p>
+      <p class="eyebrow">Simulação exclusiva</p>
+      <h2>O que vai nascer na Dom Joaquim, ainda ninguém viu de verdade.</h2>
+      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Uma simulação para sentir o clima da revelação. Quem está na lista acompanha cada novidade em primeira mão.</p>
     </div>
     <div class="video-frame">
-      <video controls playsinline preload="metadata" poster="img/fachada-coberta-poster.jpg">
+      <video muted loop playsinline preload="metadata" poster="img/fachada-coberta-poster.jpg" data-autoplay-video>
         <source src="img/fachada-coberta.mp4" type="video/mp4">
       </video>
+      <button type="button" class="video-mute-toggle" aria-label="Ativar som">🔇</button>
     </div>
   </div>
 </section>
@@ -393,9 +395,10 @@
       <h2>Recado do Maurício Zabaleta sobre o Milano.</h2>
     </div>
     <div class="video-frame">
-      <video controls playsinline preload="metadata" poster="img/anuncio-zabaleta-poster.jpg">
+      <video muted playsinline preload="metadata" poster="img/anuncio-zabaleta-poster.jpg" data-autoplay-video>
         <source src="img/anuncio-zabaleta.mp4" type="video/mp4">
       </video>
+      <button type="button" class="video-mute-toggle" aria-label="Ativar som">🔇</button>
     </div>
   </div>
 </section>
@@ -468,6 +471,46 @@
     var url = 'https://wa.me/5553981041499?text=' + encodeURIComponent(msg);
     if (window.innerWidth < 768) { window.location.href = url; } else { window.open(url, '_blank'); }
   });
+</script>
+
+<script>
+(function(){
+  var userInteracted = false;
+  function unlockSound(){
+    if (userInteracted) return;
+    userInteracted = true;
+    document.querySelectorAll('[data-autoplay-video]').forEach(function(v){
+      if (!v.paused) v.muted = false;
+      var btn = v.nextElementSibling;
+      if (btn && btn.classList.contains('video-mute-toggle')) btn.textContent = v.muted ? '🔇' : '🔊';
+    });
+  }
+  ['pointerdown','touchstart','keydown'].forEach(function(evt){
+    window.addEventListener(evt, unlockSound, { once:true, passive:true });
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var video = entry.target;
+      if (entry.isIntersecting) {
+        if (userInteracted) video.muted = false;
+        video.play().catch(function(){});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('[data-autoplay-video]').forEach(function(v){ observer.observe(v); });
+
+  document.querySelectorAll('.video-mute-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var video = btn.previousElementSibling;
+      video.muted = !video.muted;
+      btn.textContent = video.muted ? '🔇' : '🔊';
+      userInteracted = true;
+    });
+  });
+})();
 </script>
 
 <script>
