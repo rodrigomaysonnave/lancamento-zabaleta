@@ -220,7 +220,7 @@
       <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Uma simulação para sentir o clima da revelação. Quem está na lista acompanha cada novidade em primeira mão.</p>
     </div>
     <div class="video-frame">
-      <video muted loop playsinline preload="metadata" poster="../img/fachada-coberta-poster.jpg" data-autoplay-video>
+      <video muted loop playsinline preload="auto" poster="../img/fachada-coberta-poster.jpg" data-autoplay-video>
         <source src="../img/fachada-coberta.mp4" type="video/mp4">
       </video>
       <button type="button" class="video-mute-toggle" aria-label="Ativar som">🔇</button>
@@ -395,7 +395,7 @@
       <h2>Recado do Maurício Zabaleta sobre o Milano.</h2>
     </div>
     <div class="video-frame">
-      <video muted playsinline preload="metadata" poster="../img/anuncio-zabaleta-poster.jpg" data-autoplay-video>
+      <video muted playsinline preload="auto" poster="../img/anuncio-zabaleta-poster.jpg" data-autoplay-video>
         <source src="../img/anuncio-zabaleta.mp4" type="video/mp4">
       </video>
       <button type="button" class="video-mute-toggle" aria-label="Ativar som">🔇</button>
@@ -476,14 +476,28 @@
 <script>
 (function(){
   var userInteracted = false;
+  var videos = Array.prototype.slice.call(document.querySelectorAll('[data-autoplay-video]'));
+
+  function unlockVideo(v){
+    var wasPlaying = !v.paused;
+    v.muted = false;
+    var p = v.play();
+    if (p && p.then) {
+      p.then(function(){
+        if (!wasPlaying) v.pause();
+        var btn = v.nextElementSibling;
+        if (btn && btn.classList.contains('video-mute-toggle')) btn.textContent = '🔊';
+      }).catch(function(){
+        v.muted = true;
+        if (!wasPlaying) v.pause();
+      });
+    }
+  }
+
   function unlockSound(){
     if (userInteracted) return;
     userInteracted = true;
-    document.querySelectorAll('[data-autoplay-video]').forEach(function(v){
-      if (!v.paused) v.muted = false;
-      var btn = v.nextElementSibling;
-      if (btn && btn.classList.contains('video-mute-toggle')) btn.textContent = v.muted ? '🔇' : '🔊';
-    });
+    videos.forEach(unlockVideo);
   }
   ['pointerdown','touchstart','keydown'].forEach(function(evt){
     window.addEventListener(evt, unlockSound, { once:true, passive:true });
@@ -499,8 +513,8 @@
         video.pause();
       }
     });
-  }, { threshold: 0.6 });
-  document.querySelectorAll('[data-autoplay-video]').forEach(function(v){ observer.observe(v); });
+  }, { threshold: 0.4, rootMargin: '200px 0px' });
+  videos.forEach(function(v){ observer.observe(v); });
 
   document.querySelectorAll('.video-mute-toggle').forEach(function(btn){
     btn.addEventListener('click', function(){
