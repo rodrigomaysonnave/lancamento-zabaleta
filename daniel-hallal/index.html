@@ -125,7 +125,12 @@
   .level-card p{font-size:0.9rem;color:#C9C3B5;}
 
   /* GALERIA TEASER LAZER */
-  .lazer-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px;}
+  .lazer-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:22px;}
+  .reveal-card{grid-column:1/-1;position:relative;border-radius:10px;overflow:hidden;background:#20242B;}
+  .reveal-card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 40%;}
+  .reveal-card .tag{position:absolute;top:14px;left:14px;background:var(--champ);color:#16191E;font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:4px;}
+  .reveal-card .lbl{position:absolute;bottom:0;left:0;right:0;padding:40px 22px 18px;background:linear-gradient(to top, rgba(10,11,14,0.88), transparent);color:#F6F2EA;font-family:'Montserrat',sans-serif;font-weight:600;font-size:1rem;}
+  .reveal-card .lbl small{display:block;margin-top:4px;font-family:'Inter',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.04em;opacity:0.7;}
   .tease-card{position:relative;height:240px;border-radius:10px;overflow:hidden;background:#20242B;display:flex;align-items:center;justify-content:center;transform:translateZ(0);}
   .tease-blur{position:absolute;inset:-25%;filter:blur(30px);opacity:0.85;
     background:
@@ -196,6 +201,8 @@
     .plantas-grid{grid-template-columns:1fr;}
     .lazer-levels{grid-template-columns:1fr;}
     .lazer-gallery{grid-template-columns:1fr;}
+    .reveal-card img{aspect-ratio:4/3;}
+    .reveal-card .lbl{font-size:0.88rem;padding:32px 18px 14px;}
     .conv-grid{grid-template-columns:1fr;}
     section{padding:68px 0;}
   }
@@ -366,15 +373,15 @@
     <div style="margin-top:72px;">
       <p class="eyebrow">Galeria do Milano Zabaleta</p>
       <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">Conheça as áreas de lazer. Quer dizer, quase.</h2>
-      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">As imagens serão reveladas junto com o projeto. E a primeira revelação não será pública: chega por mensagem, para quem está na lista de interessados.</p>
+      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A primeira imagem já foi liberada: a piscina de borda infinita do rooftop. As próximas chegam antes, por mensagem, para quem está na lista de interessados.</p>
     </div>
     <div class="lazer-gallery">
-      <div class="tease-card"><div class="tease-blur"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Piscina de 15 m de borda infinita · Rooftop</div></div>
+      <figure class="reveal-card"><img src="../img/piscina-rooftop.jpg" alt="Piscina de borda infinita no rooftop do Milano Zabaleta ao pôr do sol, com vista aberta para Pelotas" loading="lazy"><span class="tag">Revelada</span><figcaption class="lbl">Piscina de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(120deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Lazer do 3º andar</div></div>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(240deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">O que ainda não podemos contar</div></div>
     </div>
     <div class="lazer-gallery-cta">
-      <p>Quando as imagens forem liberadas, a lista recebe primeiro.</p>
+      <p>Quando as próximas imagens forem liberadas, a lista recebe primeiro.</p>
       <a class="btn" href="https://wa.me/5553981120700?text=Ol%C3%A1%2C%20quero%20ver%20as%20imagens%20das%20%C3%A1reas%20de%20lazer%20do%20Milano%20Zabaleta%2C%20na%20Dom%20Joaquim%2C%20assim%20que%20forem%20liberadas.">Quero ver as áreas de lazer primeiro</a>
     </div>
   </div>
