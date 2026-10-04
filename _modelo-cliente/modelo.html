@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zabaleta Milano · Apresentação exclusiva para o Doutor Marcos Zabaleta</title>
+<title>Zabaleta Milano · Apresentação exclusiva · {{NOME}}</title>
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Doutor Marcos Zabaleta, o Zabaleta Milano foi apresentado primeiro a você">
+<meta property="og:title" content="{{NOME}}, o Zabaleta Milano foi apresentado primeiro a você">
 <meta property="og:description" content="Zabaleta Milano: o próximo endereço da Dom Joaquim nasce inteiro voltado para o norte. Apartamentos de 3 dormitórios, 112 a 170 m². Entre na lista de interessados.">
 <meta property="og:image" content="https://rodrigomaysonnave.github.io/lancamento-zabaleta/img/hero-poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,7 +219,7 @@
   .momento-foto img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;}
   @media (min-width:900px){.momento-foto img{aspect-ratio:16/10;}}
 </style>
-<link rel="canonical" href="https://rodrigomaysonnave.github.io/lancamento-zabaleta/marcos-zabaleta/"></head>
+<link rel="canonical" href="https://rodrigomaysonnave.github.io/lancamento-zabaleta/{{PASTA}}/"></head>
 <body>
 
 <header>
@@ -245,9 +245,9 @@
 <section class="boas-vindas" id="para-voce">
   <div class="wrap">
     <p class="eyebrow">Apresentação exclusiva para</p>
-    <h2 class="nome">Doutor Marcos Zabaleta</h2>
+    <h2 class="nome">{{NOME}}</h2>
     <div class="linha"></div>
-    <p class="txt">Marcos, preparamos esta apresentação para você conhecer o Zabaleta Milano antes do lançamento oficial.</p>
+    <p class="txt">{{NOME_CURTO}}, preparamos esta apresentação para você conhecer o Zabaleta Milano antes do lançamento oficial.</p>
     <p class="txt">Você vai conhecer o que já está definido no projeto e uma surpresa que pensamos especialmente para você.</p>
   </div>
 </section>
@@ -364,7 +364,7 @@
     </div>
     <div class="plantas-cta">
       <p>As plantas e condições de pré-lançamento serão enviadas primeiro a quem está na lista.</p>
-      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20Doutor%20Marcos%20Zabaleta.%20Quero%20receber%20as%20plantas%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20em%20primeira%20m%C3%A3o.">Quero receber as plantas em primeira mão</a>
+      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20{{NOME_URL}}.%20Quero%20receber%20as%20plantas%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20em%20primeira%20m%C3%A3o.">Quero receber as plantas em primeira mão</a>
     </div>
   </div>
 </section>
@@ -404,7 +404,7 @@
     </div>
     <div class="lazer-gallery-cta">
       <p>Quando as próximas imagens forem liberadas, a lista recebe primeiro.</p>
-      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20Doutor%20Marcos%20Zabaleta.%20Quero%20ver%20as%20imagens%20das%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20assim%20que%20forem%20liberadas.">Quero ver as áreas de lazer primeiro</a>
+      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20{{NOME_URL}}.%20Quero%20ver%20as%20imagens%20das%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20assim%20que%20forem%20liberadas.">Quero ver as áreas de lazer primeiro</a>
     </div>
   </div>
 </section>
@@ -412,12 +412,12 @@
 <section class="section-alt" id="momento">
   <div class="wrap">
     <div class="momento-intro">
-      <p class="eyebrow">Doutor Marcos Zabaleta</p>
+      <p class="eyebrow">{{NOME}}</p>
       <h2>Imaginamos esse momento para você.</h2>
       <p>Fim de tarde no rooftop do Milano, a piscina de borda infinita debruçada sobre a Dom Joaquim e Pelotas inteira no horizonte. É assim que a gente enxerga o seu dia a dia aqui.</p>
     </div>
     <figure class="momento-foto">
-      <img src="img/piscina-marcos.jpg" alt="Doutor Marcos Zabaleta na piscina de borda infinita do rooftop do Zabaleta Milano ao pôr do sol" loading="lazy">
+      <img src="img/foto-cliente.jpg" alt="{{NOME}} na piscina de borda infinita do rooftop do Zabaleta Milano ao pôr do sol" loading="lazy">
     </figure>
     <p class="img-caption" style="margin-top:12px;">Simulação ilustrativa personalizada · Piscina de 15 m de borda infinita, rooftop do 16º pavimento</p>
   </div>
@@ -501,11 +501,11 @@
       <h3>Entrar na lista de interessados</h3>
       <p class="sub">Preencha e fale direto com o corretor responsável no WhatsApp.</p>
       <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" value="Doutor Marcos Zabaleta">
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" value="{{NOME}}">
       <label for="telefone">Telefone / WhatsApp</label>
       <input type="tel" id="telefone" name="telefone" required placeholder="(53) 9xxxx-xxxx">
       <button type="submit" class="btn">Garantir prioridade na lista</button>
-      <a class="whatsapp-direct" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20Doutor%20Marcos%20Zabaleta.%20Quero%20entrar%20na%20lista%20de%20interessados%20do%20Zabaleta%20Milano%2C%20na%20Av.%20Dom%20Joaquim.">ou fale direto pelo WhatsApp, sem preencher o formulário</a>
+      <a class="whatsapp-direct" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20{{NOME_URL}}.%20Quero%20entrar%20na%20lista%20de%20interessados%20do%20Zabaleta%20Milano%2C%20na%20Av.%20Dom%20Joaquim.">ou fale direto pelo WhatsApp, sem preencher o formulário</a>
     </form>
   </div>
 </section>
@@ -525,7 +525,7 @@
     e.preventDefault();
     var nome = document.getElementById('nome').value.trim();
     var telefone = document.getElementById('telefone').value.trim();
-    var msg = 'Olá Rodrigo, aqui é o Doutor Marcos Zabaleta. Quero entrar na lista de interessados do Zabaleta Milano, na Av. Dom Joaquim.\nNome: ' + nome + '\nTelefone: ' + telefone;
+    var msg = 'Olá Rodrigo, aqui é o {{NOME}}. Quero entrar na lista de interessados do Zabaleta Milano, na Av. Dom Joaquim.\nNome: ' + nome + '\nTelefone: ' + telefone;
     var url = 'https://wa.me/5553981041499?text=' + encodeURIComponent(msg);
     if (window.innerWidth < 768) { window.location.href = url; } else { window.open(url, '_blank'); }
   });
