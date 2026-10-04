@@ -207,9 +207,12 @@
     .conv-grid{grid-template-columns:1fr;}
     section{padding:68px 0;}
   }
-  .greeting{margin-bottom:22px;padding-left:16px;border-left:3px solid var(--champ);}
-  .greeting small{display:block;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#E4DCCB;text-shadow:0 2px 12px rgba(0,0,0,0.85);}
-  .greeting strong{display:block;margin-top:4px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.5rem,3.8vw,2.4rem);line-height:1.15;color:#FFFFFF;text-shadow:0 4px 24px rgba(0,0,0,0.85);}
+  .boas-vindas{padding:84px 0;text-align:center;}
+  .boas-vindas .wrap{max-width:760px;}
+  .boas-vindas .nome{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;margin:14px 0 22px;}
+  .boas-vindas .linha{width:56px;height:2px;background:var(--champ);margin:0 auto 24px;}
+  .boas-vindas p.txt{font-size:1.04rem;margin-bottom:14px;}
+  .boas-vindas .assina-rm{margin-top:26px;font-family:'Montserrat',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--champ-deep);}
   .momento-intro{max-width:720px;margin-bottom:36px;}
   .momento-intro h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-top:12px;}
   .momento-intro p{margin-top:14px;font-size:0.98rem;}
@@ -232,12 +235,22 @@
     <source src="../img/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
-    <p class="greeting"><small>Apresentação exclusiva para</small><strong>Doutor Marcos Zabaleta</strong></p>
     <p class="project-name">Milano Zabaleta</p>
     <p class="eyebrow">Pré-lançamento · Av. Dom Joaquim · Pelotas</p>
     <h1>Onde o sol te visita todas as manhãs. E fica o dia inteiro.</h1>
-    <p class="sub">Doutor Marcos, preparamos esta apresentação para o senhor conhecer o Milano Zabaleta antes do lançamento. Maioria absoluta dos apartamentos com frente norte, todos com sol garantido. 3 dormitórios, de 112 a 170 m², na Av. Dom Joaquim.</p>
+    <p class="sub">Maioria absoluta dos apartamentos com frente norte, todos com sol garantido. 3 dormitórios, de 112 a 170 m², no Milano Zabaleta, na Av. Dom Joaquim.</p>
     <div class="hero-badge">Construtora Zabaleta · desde 1982</div>
+  </div>
+</section>
+
+<section class="boas-vindas" id="para-voce">
+  <div class="wrap">
+    <p class="eyebrow">Apresentação exclusiva para</p>
+    <h2 class="nome">Doutor Marcos Zabaleta</h2>
+    <div class="linha"></div>
+    <p class="txt">Doutor Marcos, preparamos esta apresentação para o senhor conhecer o Milano Zabaleta antes do lançamento oficial.</p>
+    <p class="txt">Nas próximas seções estão o projeto, o que já está definido e uma surpresa que pensamos especialmente para o senhor.</p>
+    <p class="assina-rm">Rodrigo Maysonnave · Corretor responsável</p>
   </div>
 </section>
 
