@@ -207,9 +207,15 @@
     .conv-grid{grid-template-columns:1fr;}
     section{padding:68px 0;}
   }
-  .greeting{display:inline-flex;align-items:center;gap:10px;background:rgba(246,242,234,0.1);border:1px solid rgba(183,147,95,0.6);border-radius:30px;padding:8px 18px 8px 10px;margin-bottom:18px;font-family:'Montserrat',sans-serif;font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#F6F2EA;backdrop-filter:blur(4px);}
-  .greeting::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--champ);flex-shrink:0;}
-  .reveal-card.personal img{object-position:center 30%;}
+  .greeting{margin-bottom:22px;padding-left:16px;border-left:3px solid var(--champ);}
+  .greeting small{display:block;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#E4DCCB;text-shadow:0 2px 12px rgba(0,0,0,0.85);}
+  .greeting strong{display:block;margin-top:4px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.5rem,3.8vw,2.4rem);line-height:1.15;color:#FFFFFF;text-shadow:0 4px 24px rgba(0,0,0,0.85);}
+  .momento-intro{max-width:720px;margin-bottom:36px;}
+  .momento-intro h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-top:12px;}
+  .momento-intro p{margin-top:14px;font-size:0.98rem;}
+  .momento-foto{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(20,22,26,0.22);}
+  .momento-foto img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;}
+  @media (min-width:900px){.momento-foto img{aspect-ratio:16/10;}}
 </style>
 <link rel="canonical" href="https://rodrigomaysonnave.github.io/lancamento-zabaleta/marcos-zabaleta/"></head>
 <body>
@@ -226,7 +232,7 @@
     <source src="../img/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
-    <p class="greeting">Apresentação exclusiva · Doutor Marcos Zabaleta</p>
+    <p class="greeting"><small>Apresentação exclusiva para</small><strong>Doutor Marcos Zabaleta</strong></p>
     <p class="project-name">Milano Zabaleta</p>
     <p class="eyebrow">Pré-lançamento · Av. Dom Joaquim · Pelotas</p>
     <h1>Onde o sol te visita todas as manhãs. E fica o dia inteiro.</h1>
@@ -378,10 +384,10 @@
     <div style="margin-top:72px;">
       <p class="eyebrow">Galeria do Milano Zabaleta</p>
       <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">Conheça as áreas de lazer. Quer dizer, quase.</h2>
-      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A primeira imagem já foi liberada: a piscina de borda infinita do rooftop. E nós já imaginamos o senhor nela. As próximas chegam antes, por mensagem, para quem está na lista de interessados.</p>
+      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A primeira imagem já foi liberada: a piscina de borda infinita do rooftop. As próximas chegam antes, por mensagem, para quem está na lista de interessados.</p>
     </div>
     <div class="lazer-gallery">
-      <figure class="reveal-card personal"><img src="img/piscina-marcos.jpg" alt="Doutor Marcos Zabaleta na piscina de borda infinita do rooftop do Milano Zabaleta ao pôr do sol" loading="lazy"><span class="tag">Para o senhor</span><figcaption class="lbl">Doutor Marcos no rooftop do Milano<small>Piscina de 15 m de borda infinita, 16º pavimento · Simulação ilustrativa personalizada</small></figcaption></figure>
+      <figure class="reveal-card"><img src="../img/piscina-rooftop.jpg" alt="Piscina de borda infinita no rooftop do Milano Zabaleta ao pôr do sol, com vista aberta para Pelotas" loading="lazy"><span class="tag">Revelada</span><figcaption class="lbl">Piscina de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(120deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Lazer do 3º andar</div></div>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(240deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">O que ainda não podemos contar</div></div>
     </div>
@@ -389,6 +395,20 @@
       <p>Quando as próximas imagens forem liberadas, a lista recebe primeiro.</p>
       <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%20Rodrigo%2C%20aqui%20%C3%A9%20o%20Doutor%20Marcos%20Zabaleta.%20Quero%20ver%20as%20imagens%20das%20%C3%A1reas%20de%20lazer%20do%20Milano%20Zabaleta%2C%20na%20Dom%20Joaquim%2C%20assim%20que%20forem%20liberadas.">Quero ver as áreas de lazer primeiro</a>
     </div>
+  </div>
+</section>
+
+<section class="section-alt" id="momento">
+  <div class="wrap">
+    <div class="momento-intro">
+      <p class="eyebrow">Doutor Marcos Zabaleta</p>
+      <h2>Imaginamos esse momento para você.</h2>
+      <p>Fim de tarde no rooftop do Milano, a piscina de borda infinita debruçada sobre a Dom Joaquim e Pelotas inteira no horizonte. É assim que a gente enxerga o seu dia a dia aqui.</p>
+    </div>
+    <figure class="momento-foto">
+      <img src="img/piscina-marcos.jpg" alt="Doutor Marcos Zabaleta na piscina de borda infinita do rooftop do Milano Zabaleta ao pôr do sol" loading="lazy">
+    </figure>
+    <p class="img-caption" style="margin-top:12px;">Simulação ilustrativa personalizada · Piscina de 15 m de borda infinita, rooftop do 16º pavimento</p>
   </div>
 </section>
 
