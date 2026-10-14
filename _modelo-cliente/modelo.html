@@ -9,10 +9,17 @@
 <meta property="og:description" content="Zabaleta Milano: o próximo endereço da Dom Joaquim nasce inteiro voltado para o norte. Apartamentos de 3 dormitórios, 112 a 170 m². Entre na lista de interessados.">
 <meta property="og:image" content="https://zabaletamilano.net/img/hero-poster.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../fontes/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fontes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/hero-poster.webp" as="image" fetchpriority="high">
 <style>
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(../fontes/montserrat-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(../fontes/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(../fontes/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:800;font-display:swap;src:url(../fontes/montserrat-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(../fontes/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(../fontes/inter-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(../fontes/inter-latin-600-normal.woff2) format('woff2')}
   :root{
     --bg:#F6F2EA;
     --alt:#EDE7DB;
@@ -235,13 +242,13 @@
 
 <header>
   <div class="wrap">
-    <img class="logo" src="../img/logo-zabaleta.png" alt="Construtora Zabaleta">
+    <img class="logo" src="../img/logo-zabaleta.webp" alt="Construtora Zabaleta">
     <a href="#lista" class="btn btn-outline">Lista de interessados</a>
   </div>
 </header>
 
 <section class="hero">
-  <video autoplay muted loop playsinline poster="../img/hero-poster.jpg">
+  <video autoplay muted loop playsinline poster="../img/hero-poster.webp">
     <source src="../img/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -270,7 +277,7 @@
       <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Uma simulação para sentir o clima da revelação. Quem está na lista acompanha cada novidade em primeira mão.</p>
     </div>
     <div class="video-frame">
-      <video muted loop playsinline preload="auto" poster="../img/fachada-coberta-poster.jpg" data-autoplay-video>
+      <video muted loop playsinline preload="auto" poster="../img/fachada-coberta-poster.webp" data-autoplay-video>
         <source src="../img/fachada-coberta.mp4" type="video/mp4">
       </video>
       <button type="button" class="video-mute-toggle is-muted" aria-label="Ativar som"><span class="video-mute-icon">🔇</span><span class="video-mute-label">Ativar som</span></button>
@@ -288,7 +295,7 @@
       <p>É uma característica irreversível de projeto. Ou o prédio nasce assim, ou nunca será.</p>
     </div>
     <div class="img-col">
-      <img src="../img/hero-poster.jpg" alt="Vista aérea da Avenida Dom Joaquim, Pelotas">
+      <img src="../img/hero-poster.webp" alt="Vista aérea da Avenida Dom Joaquim, Pelotas" loading="lazy" decoding="async">
       <p class="img-caption">Av. Dom Joaquim · imagem aérea captada no local do empreendimento</p>
     </div>
   </div>
@@ -297,7 +304,7 @@
 <section class="section-alt">
   <div class="wrap two-col reverse">
     <div class="img-col">
-      <img src="../img/area-verde-parque.jpg" alt="Caminho arborizado em área verde privativa do empreendimento">
+      <img src="../img/area-verde-parque.webp" alt="Caminho arborizado em área verde privativa do empreendimento" loading="lazy" decoding="async">
     </div>
     <div>
       <p class="eyebrow">Diferencial exclusivo</p>
@@ -434,7 +441,7 @@
       <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A primeira imagem já foi liberada: a piscina de borda infinita do rooftop. As próximas chegam antes, por mensagem, para quem está na lista de interessados.</p>
     </div>
     <div class="lazer-gallery">
-      <figure class="reveal-card"><img src="../img/piscina-rooftop.jpg" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com vista aberta para Pelotas" loading="lazy"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
+      <figure class="reveal-card"><img src="../img/piscina-rooftop.webp" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com vista aberta para Pelotas" loading="lazy"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(120deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Lazer do 3º andar</div></div>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(240deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">O que ainda não podemos contar</div></div>
     </div>
@@ -489,7 +496,7 @@
       <h2>Recado do Maurício Zabaleta sobre o Milano.</h2>
     </div>
     <div class="video-frame">
-      <video muted playsinline preload="auto" poster="../img/anuncio-zabaleta-poster.jpg" data-autoplay-video>
+      <video muted playsinline preload="auto" poster="../img/anuncio-zabaleta-poster.webp" data-autoplay-video>
         <source src="../img/anuncio-zabaleta.mp4" type="video/mp4">
       </video>
       <button type="button" class="video-mute-toggle is-muted" aria-label="Ativar som"><span class="video-mute-icon">🔇</span><span class="video-mute-label">Ativar som</span></button>
@@ -500,7 +507,7 @@
 <section class="section-alt construtora">
   <div class="wrap two-col reverse">
     <div class="img-col">
-      <img src="../img/zabaleta-tower.jpg" alt="Zabaleta Tower, empreendimento entregue pela Construtora Zabaleta">
+      <img src="../img/zabaleta-tower.webp" alt="Zabaleta Tower, empreendimento entregue pela Construtora Zabaleta" loading="lazy" decoding="async">
       <p class="img-caption">Zabaleta Tower · empreendimento da Construtora Zabaleta</p>
     </div>
     <div>
@@ -515,7 +522,7 @@
 
 <section>
   <div class="wrap broker">
-    <img class="broker-photo" src="../img/corretor-rodrigo.jpg" alt="Rodrigo Maysonnave Fernandes, corretor de imóveis" loading="lazy">
+    <img class="broker-photo" src="../img/corretor-rodrigo.webp" alt="Rodrigo Maysonnave Fernandes, corretor de imóveis" loading="lazy">
     <div>
       <p class="eyebrow">Quem atende você</p>
       <h3>Rodrigo Maysonnave</h3>
@@ -548,8 +555,8 @@
 
 <footer>
   <div class="logos">
-    <img src="../img/logo-zabaleta.png" alt="Construtora Zabaleta">
-    <img class="mays" src="../img/logo-maysonnave.png" alt="Maysonnave Imóveis">
+    <img src="../img/logo-zabaleta.webp" alt="Construtora Zabaleta" loading="lazy" decoding="async">
+    <img class="mays" src="../img/logo-maysonnave.webp" alt="Maysonnave Imóveis" loading="lazy" decoding="async">
   </div>
   <p>Zabaleta Milano · Realização: Construtora Zabaleta · desde 1982 · Vendas: Rodrigo Maysonnave Fernandes · CRECI-RS 61.580</p>
   <p>Rua XV de Novembro, 666, Loja 67, Galeria Zabaleta, Pelotas/RS · (53) 98104-1499</p>
