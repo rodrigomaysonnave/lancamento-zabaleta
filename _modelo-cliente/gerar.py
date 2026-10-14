@@ -7,7 +7,7 @@ Uso:
 Cria a pasta <nome-do-cliente>/ na raiz do repositório com o index.html e a
 foto do cliente na piscina (img/foto-cliente.jpg). Depois é só fazer commit
 e push: o link fica em
-https://rodrigomaysonnave.github.io/lancamento-zabaleta/<nome-do-cliente>/
+https://zabaletamilano.net/<nome-do-cliente>/
 
 A pasta _modelo-cliente/ começa com "_", então o GitHub Pages não a publica.
 """
@@ -49,7 +49,7 @@ def main():
     open(os.path.join(destino, 'index.html'), 'w', encoding='utf-8').write(html)
 
     print(f'Pronto: {pasta}/')
-    print(f'Link: https://rodrigomaysonnave.github.io/lancamento-zabaleta/{pasta}/')
+    print(f'Link: https://zabaletamilano.net/{pasta}/')
 
 
 if __name__ == '__main__':

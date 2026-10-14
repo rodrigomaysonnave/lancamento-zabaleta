@@ -27,4 +27,4 @@ python3 _modelo-cliente/gerar.py "Doutor Fulano de Tal" Fulano caminho/da/foto.p
 git add fulano-de-tal && git commit -m "LP personalizada: Doutor Fulano de Tal" && git push
 ```
 
-Para que a prévia saia atualizada no WhatsApp, mande o link com `?v=1` no final.
+O link sai em `https://zabaletamilano.net/<nome-do-cliente>/`. Para que a prévia saia atualizada no WhatsApp, mande o link com `?v=1` no final.
