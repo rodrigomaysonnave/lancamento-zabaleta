@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ficha-interesse/
+
+Sitemap: https://zabaletamilano.net/sitemap.xml
