@@ -19,10 +19,12 @@
 <meta name="twitter:title" content="Zabaleta Milano · Av. Dom Joaquim">
 <meta name="twitter:description" content="Pré-lançamento de alto padrão em Pelotas na Av. Dom Joaquim.">
 <meta name="twitter:image" content="https://zabaletamilano.net/img/piscina-rooftop.jpg">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="fontes/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fontes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-poster.webp" as="image" fetchpriority="high">
+<link rel="preload" href="img/logo-milano.webp" as="image">
 <style>
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(fontes/montserrat-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(fontes/montserrat-latin-600-normal.woff2) format('woff2')}
@@ -69,10 +71,12 @@
   .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(8,9,12,0.98) 0%, rgba(8,9,12,0.85) 18%, rgba(8,9,12,0.42) 42%, rgba(8,9,12,0.1) 68%, rgba(8,9,12,0.05) 100%);}
   .hero-content{position:relative;z-index:2;color:#F6F2EA;padding:0 32px 28px;max-width:1160px;margin:0 auto;width:100%;}
-  .hero-content .project-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.9rem,5.4vw,3.1rem);letter-spacing:0.04em;text-transform:uppercase;color:var(--champ);line-height:1.12;margin-bottom:8px;text-shadow:0 4px 24px rgba(0,0,0,0.75);}
+  .hero-content .project-name{position:relative;display:inline-block;margin-bottom:18px;line-height:0;}
+  .hero-content .project-name::before{content:"";position:absolute;inset:-38% -55%;background:radial-gradient(closest-side, rgba(8,9,12,0.82), rgba(8,9,12,0.55) 55%, rgba(8,9,12,0) 100%);z-index:-1;}
+  .hero-content .project-name img{position:relative;width:clamp(124px,15vw,180px);height:auto;filter:brightness(1.3) saturate(1.1) drop-shadow(0 0 1px rgba(0,0,0,0.9));}
   .hero-content .eyebrow{color:#FFFFFF;margin-bottom:14px;font-size:0.92rem;font-weight:700;letter-spacing:0.2em;text-shadow:0 2px 16px rgba(0,0,0,0.85);}
   .name-divider{padding:56px 0;text-align:center;background:var(--dark);}
-  .name-divider span{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.7rem,4.2vw,2.7rem);letter-spacing:0.07em;text-transform:uppercase;color:var(--champ);}
+  .name-divider img{width:clamp(110px,13vw,150px);height:auto;margin:0 auto;}
   .name-divider small{display:block;margin-top:10px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:#8B8F98;}
   .hero-content .slogan{font-size:clamp(2rem,4.6vw,3.4rem);max-width:840px;margin-bottom:14px;font-weight:800;text-shadow:0 4px 30px rgba(0,0,0,0.8), 0 1px 6px rgba(0,0,0,0.6);}
   .hero-content p.sub{font-size:0.96rem;max-width:560px;color:#F0EBDF;margin-bottom:0;text-shadow:0 2px 16px rgba(0,0,0,0.8);}
@@ -275,7 +279,7 @@
     <source src="img/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
-    <h1 class="project-name">Zabaleta Milano</h1>
+    <h1 class="project-name"><img src="img/logo-milano.webp" alt="Zabaleta Milano" width="520" height="621" fetchpriority="high"></h1>
     <p class="eyebrow">Pré-lançamento · Av. Dom Joaquim · Pelotas</p>
     <h2 class="slogan">Onde o sol te visita todas as manhãs. E fica o dia inteiro.</h2>
     <p class="sub">Maioria absoluta dos apartamentos com frente norte, todos com sol garantido. 3 dormitórios, de 112 a 170 m², no Zabaleta Milano, na Av. Dom Joaquim.</p>
@@ -371,7 +375,7 @@
   </div>
 </section>
 
-<div class="name-divider"><span>Zabaleta Milano</span><small>Av. Dom Joaquim · Pelotas</small></div>
+<div class="name-divider"><img src="img/logo-milano.webp" alt="Zabaleta Milano" width="520" height="621" loading="lazy" decoding="async"><small>Av. Dom Joaquim · Pelotas</small></div>
 
 <section class="section-alt">
   <div class="wrap">
@@ -486,7 +490,7 @@
   </div>
 </section>
 
-<div class="name-divider"><span>Zabaleta Milano</span><small>Construtora Zabaleta · desde 1982</small></div>
+<div class="name-divider"><img src="img/logo-milano.webp" alt="Zabaleta Milano" width="520" height="621" loading="lazy" decoding="async"><small>Construtora Zabaleta · desde 1982</small></div>
 
 <section class="section-dark">
   <div class="wrap">
