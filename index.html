@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Título otimizado para SEO -->
 <title>Zabaleta Milano | Apartamentos na Av. Dom Joaquim - Pelotas</title>
-<meta name="description" content="Pré-lançamento na Av. Dom Joaquim, Pelotas: apartamentos de 3 dormitórios de 112 a 170 m², 100% com sol garantido e parque privativo de 500 m². Lista VIP.">
+<meta name="description" content="Pré-lançamento na Av. Dom Joaquim, Pelotas: apartamentos de 3 dormitórios de 112 a 170 m², 100% com sol garantido e parque privativo de 550 m². Lista VIP.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://zabaletamilano.net/">
 <!-- Open Graph / WhatsApp / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zabaletamilano.net/">
 <meta property="og:title" content="Zabaleta Milano · Av. Dom Joaquim, Pelotas">
-<meta property="og:description" content="A maioria absoluta dos apartamentos com frente norte. 3 dormitórios, 112 a 170 m² e parque privativo de 500 m². Acesse a lista de interessados.">
-<meta property="og:image" content="https://zabaletamilano.net/img/piscina-rooftop.jpg">
+<meta property="og:description" content="A maioria absoluta dos apartamentos com frente norte. 3 dormitórios, 112 a 170 m² e parque privativo de 550 m². Acesse a lista de interessados.">
+<meta property="og:image" content="https://zabaletamilano.net/img/fachada-milano.jpg">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zabaleta Milano · Av. Dom Joaquim">
 <meta name="twitter:description" content="Pré-lançamento de alto padrão em Pelotas na Av. Dom Joaquim.">
-<meta name="twitter:image" content="https://zabaletamilano.net/img/piscina-rooftop.jpg">
+<meta name="twitter:image" content="https://zabaletamilano.net/img/fachada-milano.jpg">
 <link rel="icon" href="/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="fontes/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -93,6 +93,23 @@
   .video-intro h2{font-size:1.9rem;margin-top:12px;}
   .video-frame{position:relative;width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(23,26,31,0.28);background:#000;}
   .video-frame video{width:100%;display:block;}
+
+  /* FACHADA REVELADA */
+  .fachada-intro .eyebrow{font-size:1.45rem;font-weight:700;letter-spacing:0.14em;line-height:1.3;margin-bottom:18px;}
+  .fachada-intro h2{font-size:1.6rem;line-height:1.25;}
+  .fachada-intro p:last-child{margin-top:12px;font-size:1rem;opacity:0.85;}
+  .fachada-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;}
+  .fachada-grid figure{margin:0;}
+  .fachada-grid img{display:block;width:100%;height:auto;border-radius:10px;}
+  .fachada-side h3{font-size:1.15rem;margin:24px 0 10px;}
+  .fachada-side p{font-size:1rem;margin-bottom:22px;opacity:0.85;}
+  @media (max-width:860px){
+    .fachada-grid{grid-template-columns:1fr;gap:32px;}
+    .fachada-intro .eyebrow{font-size:1.05rem;letter-spacing:0.12em;margin-bottom:14px;}
+    .fachada-intro h2{font-size:1.4rem;}
+    .fachada-side .btn{display:block;text-align:center;}
+    .fachada-grid .img-caption{font-size:0.82rem;}
+  }
   .video-mute-toggle{position:absolute;bottom:14px;right:14px;min-width:36px;height:36px;padding:0 10px;border-radius:18px;background:rgba(23,26,31,0.6);border:1px solid rgba(255,255,255,0.3);color:#fff;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:15px;z-index:2;}
   .video-mute-label{display:none;font-size:12px;font-family:'Montserrat',sans-serif;letter-spacing:0.02em;white-space:nowrap;}
   @media (hover:hover) and (pointer:fine){
@@ -288,16 +305,25 @@
 
 <section class="section-dark">
   <div class="wrap">
-    <div class="video-intro">
-      <p class="eyebrow">Simulação exclusiva</p>
-      <h2>O que vai nascer na Dom Joaquim, ainda ninguém viu de verdade.</h2>
-      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Uma simulação para sentir o clima da revelação. Quem está na lista acompanha cada novidade em primeira mão.</p>
+    <div class="video-intro fachada-intro">
+      <p class="eyebrow">A fachada foi revelada</p>
+      <h2>O céu de Pelotas vai ter onde se refletir.</h2>
+      <p>Dezesseis pavimentos de vidro, com curvas que correm de ponta a ponta da torre, como se o prédio estivesse em movimento. De dia, ele devolve o céu à avenida. No fim da tarde, acende por dentro.</p>
     </div>
-    <div class="video-frame">
-      <video muted loop playsinline preload="auto" poster="img/fachada-coberta-poster.webp" data-autoplay-video>
-        <source src="img/fachada-coberta.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="video-mute-toggle is-muted" aria-label="Ativar som"><span class="video-mute-icon">🔇</span><span class="video-mute-label">Ativar som</span></button>
+    <div class="fachada-grid">
+      <figure class="fachada-main">
+        <img src="img/fachada-milano.webp" alt="Fachada do Zabaleta Milano ao entardecer, torre de 16 pavimentos com pele de vidro e sacadas curvas na Avenida Dom Joaquim" width="1194" height="1317" loading="lazy" decoding="async">
+        <figcaption class="img-caption">Fachada do Zabaleta Milano · Perspectiva ilustrativa</figcaption>
+      </figure>
+      <div class="fachada-side">
+        <figure>
+          <img src="img/fachada-milano-arcos.webp" alt="Térreo do Zabaleta Milano com arcos iluminados, molduras e paisagismo junto à calçada" width="1448" height="1086" loading="lazy" decoding="async">
+          <figcaption class="img-caption">Arcos do térreo · Perspectiva ilustrativa</figcaption>
+        </figure>
+        <h3>Arcos de 9 metros para entrar em casa.</h3>
+        <p>É a altura de três andares, só na chegada. O desenho clássico que a Zabaleta carrega desde 1982 sobe pelos arcos, encontra o vidro e vira curva: o clássico e o moderno na mesma peça.</p>
+        <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20a%20fachada%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20pr%C3%B3ximas%20imagens.">Quero as próximas imagens</a>
+      </div>
     </div>
   </div>
 </section>
@@ -325,8 +351,8 @@
     </div>
     <div>
       <p class="eyebrow">Diferencial exclusivo</p>
-      <h2>500 m² de área verde. Um parque particular, só de quem vai morar aqui.</h2>
-      <p>Boa parte dos lançamentos resolve "área verde" com um canteiro na entrada. No Milano são 500 m² de paisagismo contínuo, com caminho próprio integrado ao térreo do edifício.</p>
+      <h2>550 m² de área verde. Um parque particular, só de quem vai morar aqui.</h2>
+      <p>Boa parte dos lançamentos resolve "área verde" com um canteiro na entrada. No Milano são 550 m² de paisagismo contínuo, com caminho próprio integrado ao térreo do edifício.</p>
       <p>Espaço para caminhar, ler ou simplesmente atravessar o dia sem sair do próprio endereço. Um parque projetado para gerar conexão com a natureza.</p>
     </div>
   </div>
@@ -435,7 +461,7 @@
     <h2 style="font-size:1.95rem;max-width:720px;margin-top:12px;">Projetada com uma meta declarada: ser a nova referência de lazer da cidade.</h2>
     <p style="max-width:640px;margin-top:16px;color:#C9C3B5;font-size:0.97rem;">A régua não é o suficiente. É o melhor que Pelotas já viu. A área de lazer foi distribuída em dois níveis do edifício — e os primeiros itens confirmados já mostram o tamanho da ambição.</p>
     <div class="stats" style="margin-top:52px;">
-      <div><div class="stat-num">100 m²</div><div class="stat-label">de academia completa, dentro do edifício</div></div>
+      <div><div class="stat-num">108 m²</div><div class="stat-label">de academia completa, dentro do edifício</div></div>
       <div><div class="stat-num">15 m</div><div class="stat-label">de piscina aquecida de borda infinita no rooftop, debruçada sobre a Dom Joaquim</div></div>
       <div><div class="stat-num">100</div><div class="stat-label">pessoas de capacidade no salão de festas</div></div>
     </div>
@@ -479,7 +505,7 @@
       <div class="conv-card"><div class="ic">Bancos</div><h3>Caixa, Sicredi, Sicoob e Cresol</h3><p>Quatro instituições financeiras na extensão da Dom Joaquim.</p></div>
       <div class="conv-card"><div class="ic">Mercado</div><h3>Nicolini, a maior loja da rede</h3><p>6.700 m² de supermercado na rótula com a Fernando Osório, com delivery.</p></div>
       <div class="conv-card"><div class="ic">Gastronomia</div><h3>Polo gastronômico das Três Vendas</h3><p>Miravos, Jardim Secreto, Cruz de Malta e a variedade de restaurantes e cafés da avenida.</p></div>
-      <div class="conv-card"><div class="ic">Ao lado</div><h3>ProFit vizinha de porta</h3><p>Além dos 100 m² de academia do próprio edifício, uma das maiores estruturas de treino da cidade fica na porta ao lado.</p></div>
+      <div class="conv-card"><div class="ic">Ao lado</div><h3>ProFit vizinha de porta</h3><p>Além dos 108 m² de academia do próprio edifício, uma das maiores estruturas de treino da cidade fica na porta ao lado.</p></div>
       <div class="conv-card"><div class="ic">Ar livre</div><h3>A avenida como extensão de casa</h3><p>Caminhada, convivência e até o cachorródromo da Dom Joaquim para os moradores com pet.</p></div>
     </div>
     <div class="conv-highlight">
