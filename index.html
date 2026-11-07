@@ -13,12 +13,12 @@
 <meta property="og:url" content="https://zabaletamilano.net/">
 <meta property="og:title" content="Zabaleta Milano · Av. Dom Joaquim, Pelotas">
 <meta property="og:description" content="A maioria absoluta dos apartamentos com frente norte. 3 dormitórios, 112 a 170 m² e parque privativo de 550 m². Acesse a lista de interessados.">
-<meta property="og:image" content="https://zabaletamilano.net/img/fachada-milano.jpg">
+<meta property="og:image" content="https://zabaletamilano.net/img/fachada-milano-noite.jpg">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zabaleta Milano · Av. Dom Joaquim">
 <meta name="twitter:description" content="Pré-lançamento de alto padrão em Pelotas na Av. Dom Joaquim.">
-<meta name="twitter:image" content="https://zabaletamilano.net/img/fachada-milano.jpg">
+<meta name="twitter:image" content="https://zabaletamilano.net/img/fachada-milano-noite.jpg">
 <link rel="icon" href="/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="fontes/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -118,6 +118,8 @@
   }
   @keyframes mute-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0.35);}50%{box-shadow:0 0 0 8px rgba(255,255,255,0);}}
 
+  .entorno-foto{margin:36px 0 0;}
+  .entorno-foto img{display:block;width:100%;height:auto;border-radius:10px;}
   .two-col{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;}
   .two-col h2{font-size:1.95rem;margin:14px 0 20px;}
   .two-col p{margin-bottom:14px;font-size:0.99rem;}
@@ -164,12 +166,14 @@
   .level-card p{font-size:0.9rem;color:#C9C3B5;}
 
   /* GALERIA TEASER LAZER */
-  .lazer-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:22px;}
+  .lazer-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px;}
   .reveal-card{grid-column:1/-1;position:relative;border-radius:10px;overflow:hidden;background:#20242B;}
   .reveal-card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 40%;}
   .reveal-card .tag{position:absolute;top:14px;left:14px;background:var(--champ);color:#16191E;font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:4px;}
   .reveal-card .lbl{position:absolute;bottom:0;left:0;right:0;padding:40px 22px 18px;background:linear-gradient(to top, rgba(10,11,14,0.88), transparent);color:#F6F2EA;font-family:'Montserrat',sans-serif;font-weight:600;font-size:1rem;}
   .reveal-card .lbl small{display:block;margin-top:4px;font-family:'Inter',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.04em;opacity:0.7;}
+  .reveal-card.mini{grid-column:auto;height:240px;}
+  .reveal-card.mini img{height:100%;aspect-ratio:auto;object-position:center;}
   .tease-card{position:relative;height:240px;border-radius:10px;overflow:hidden;background:#20242B;display:flex;align-items:center;justify-content:center;transform:translateZ(0);}
   .tease-blur{position:absolute;inset:-25%;filter:blur(30px);opacity:0.85;
     background:
@@ -253,6 +257,7 @@
     .lazer-levels{grid-template-columns:1fr;}
     .lazer-gallery{grid-template-columns:1fr;}
     .reveal-card img{aspect-ratio:4/3;}
+    .reveal-card.mini img{aspect-ratio:auto;}
     .reveal-card .lbl{font-size:0.88rem;padding:32px 18px 14px;}
     .conv-grid{grid-template-columns:1fr;}
     section{padding:68px 0;}
@@ -312,12 +317,12 @@
     </div>
     <div class="fachada-grid">
       <figure class="fachada-main">
-        <img src="img/fachada-milano.webp" alt="Fachada do Zabaleta Milano ao entardecer, torre de 16 pavimentos com pele de vidro e sacadas curvas na Avenida Dom Joaquim" width="1194" height="1317" loading="lazy" decoding="async">
+        <img src="img/fachada-milano-noite.webp" alt="Fachada do Zabaleta Milano à noite, com as curvas das sacadas iluminadas de ponta a ponta da torre na Avenida Dom Joaquim" width="1600" height="1600" loading="lazy" decoding="async">
         <figcaption class="img-caption">Fachada do Zabaleta Milano · Perspectiva ilustrativa</figcaption>
       </figure>
       <div class="fachada-side">
         <figure>
-          <img src="img/fachada-milano-arcos.webp" alt="Térreo do Zabaleta Milano com arcos iluminados, molduras e paisagismo junto à calçada" width="1448" height="1086" loading="lazy" decoding="async">
+          <img src="img/fachada-milano-terreo.webp" alt="Térreo do Zabaleta Milano ao anoitecer, com arcos iluminados, placa de entrada e paisagismo junto à calçada" width="1600" height="800" loading="lazy" decoding="async">
           <figcaption class="img-caption">Arcos do térreo · Perspectiva ilustrativa</figcaption>
         </figure>
         <h3>Arcos de 9 metros para entrar em casa.</h3>
@@ -338,8 +343,32 @@
       <p>É uma característica irreversível de projeto. Ou o prédio nasce assim, ou nunca será.</p>
     </div>
     <div class="img-col">
-      <img src="img/hero-poster.webp" alt="Vista aérea da Avenida Dom Joaquim, Pelotas" loading="lazy" decoding="async">
-      <p class="img-caption">Av. Dom Joaquim · imagem aérea captada no local do empreendimento</p>
+      <img src="img/fachada-milano-dia.webp" alt="Fachada do Zabaleta Milano ao sol, com o céu refletido no vidro e as sacadas curvas da torre" loading="lazy" decoding="async">
+      <p class="img-caption">Fachada do Zabaleta Milano ao sol · Perspectiva ilustrativa</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="video-intro fachada-intro">
+      <p class="eyebrow">A chegada</p>
+      <h2>235 m² de hall, com o jardim no lugar da parede.</h2>
+      <p>Pé-direito duplo, paredes que ondulam como as curvas da fachada e a luz do dia atravessando o piso. No centro, uma escultura que une o clássico e o moderno, a mesma ideia dos arcos que ficaram lá fora.</p>
+    </div>
+    <div class="fachada-grid">
+      <figure class="fachada-main">
+        <img src="img/hall-escultura.webp" alt="Hall de entrada do Zabaleta Milano com paredes onduladas iluminadas, colunas e escultura central" width="1448" height="993" loading="lazy" decoding="async">
+        <figcaption class="img-caption">Hall de entrada · Perspectiva ilustrativa</figcaption>
+      </figure>
+      <div class="fachada-side">
+        <figure>
+          <img src="img/hall-jardim.webp" alt="Recepção do hall com vidraças do piso ao teto voltadas para o jardim" width="1448" height="993" loading="lazy" decoding="async">
+          <figcaption class="img-caption">Recepção e jardim · Perspectiva ilustrativa</figcaption>
+        </figure>
+        <h3>O jardim começa antes de você sair.</h3>
+        <p>As vidraças vão do piso ao teto e fazem dos 550 m² de jardim uma extensão visual do hall. Quem chega em casa atravessa o verde com os olhos antes de chamar o elevador.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -481,10 +510,11 @@
     <div style="margin-top:72px;">
       <p class="eyebrow">Galeria do Zabaleta Milano</p>
       <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">Conheça as áreas de lazer. Quer dizer, quase.</h2>
-      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A primeira imagem já foi liberada: a piscina de borda infinita do rooftop. As próximas chegam antes, por mensagem, para quem está na lista de interessados.</p>
+      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A piscina de borda infinita do rooftop já foi revelada. As próximas imagens chegam antes, por mensagem, para quem está na lista de interessados.</p>
     </div>
     <div class="lazer-gallery">
-      <figure class="reveal-card"><img src="img/piscina-rooftop.webp" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com vista aberta para Pelotas" loading="lazy"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
+      <figure class="reveal-card"><img src="img/piscina-rooftop-curva.webp" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com espreguiçadeiras, cortina d'água e vista aberta para Pelotas" loading="lazy" decoding="async"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
+      <figure class="reveal-card mini"><img src="img/piscina-rooftop.webp" alt="Borda da piscina do rooftop ao pôr do sol, com a cidade de Pelotas ao fundo" loading="lazy" decoding="async"><span class="tag">Revelada</span><figcaption class="lbl">A borda ao pôr do sol<small>Perspectiva ilustrativa</small></figcaption></figure>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(120deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Lazer do 3º andar</div></div>
       <div class="tease-card"><div class="tease-blur" style="transform:rotate(240deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">O que ainda não podemos contar</div></div>
     </div>
@@ -500,6 +530,13 @@
     <p class="eyebrow">O entorno</p>
     <h2 style="font-size:1.95rem;max-width:680px;margin-top:12px;">Morar na Dom Joaquim é resolver a vida a pé.</h2>
     <p style="max-width:640px;margin-top:14px;font-size:0.97rem;opacity:0.85;">A avenida concentra o que os moradores dos melhores endereços de Pelotas usam todos os dias. E o empreendimento nasce no meio disso tudo.</p>
+    <figure class="entorno-foto">
+      <picture>
+        <source media="(max-width:720px)" srcset="img/vista-dom-joaquim-celular.webp" width="1100" height="733">
+        <img src="img/vista-dom-joaquim.webp" alt="Sacadas do Zabaleta Milano ao anoitecer, com a Avenida Dom Joaquim iluminada ao fundo" width="2000" height="800" loading="lazy" decoding="async">
+      </picture>
+      <figcaption class="img-caption">A Dom Joaquim vista do Milano · Perspectiva ilustrativa</figcaption>
+    </figure>
     <div class="conv-grid">
       <div class="conv-card"><div class="ic">Saúde</div><h3>Moinho Office</h3><p>Complexo de consultórios médicos e centros de estética na própria avenida.</p></div>
       <div class="conv-card"><div class="ic">Bancos</div><h3>Caixa, Sicredi, Sicoob e Cresol</h3><p>Quatro instituições financeiras na extensão da Dom Joaquim.</p></div>
