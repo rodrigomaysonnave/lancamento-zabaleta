@@ -184,6 +184,20 @@
   .tease-card .q{position:relative;width:58px;height:58px;border-radius:50%;background:var(--champ);color:#16191E;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;box-shadow:0 6px 24px rgba(0,0,0,0.4);}
   .tease-card .tag{position:absolute;top:14px;left:14px;background:rgba(246,242,234,0.92);color:#16191E;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:4px;}
   .tease-card .lbl{position:absolute;bottom:0;left:0;right:0;padding:16px 18px 14px;background:linear-gradient(to top, rgba(10,11,14,0.85), transparent);color:#F6F2EA;font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.88rem;}
+  .lazer-gallery{grid-template-columns:2fr 1fr;}
+  .lazer-gallery .reveal-card{grid-column:auto;}
+  .lazer-gallery .reveal-card.mini{height:auto;min-height:240px;}
+  .lazer-gallery .reveal-card.mini img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .lazer-areas{display:grid;grid-template-columns:1fr 1fr;gap:44px 32px;margin-top:56px;}
+  .lazer-area{margin:0;}
+  .lazer-area .ph{position:relative;border-radius:10px;overflow:hidden;background:#20242B;}
+  .lazer-area .ph img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;}
+  .lazer-area .ph .tag{position:absolute;top:14px;left:14px;background:var(--champ);color:#16191E;font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:4px;}
+  .lazer-area .where{margin-top:20px;font-family:'Montserrat',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--champ);}
+  .lazer-area h3{font-size:1.18rem;margin:8px 0 10px;color:#F6F2EA;}
+  .lazer-area p{font-size:0.92rem;color:#C9C3B5;}
+  .lazer-area .img-caption{margin-top:8px;color:#C9C3B5;}
+  @media (max-width:860px){.lazer-areas{grid-template-columns:1fr;gap:40px;margin-top:40px;}.lazer-area .ph img{aspect-ratio:4/3;}}
   .lazer-gallery-cta{margin-top:34px;text-align:center;}
   .lazer-gallery-cta p{font-size:0.9rem;color:#C9C3B5;margin-bottom:16px;}
 
@@ -509,18 +523,46 @@
 
     <div style="margin-top:72px;">
       <p class="eyebrow">Galeria do Zabaleta Milano</p>
-      <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">Conheça as áreas de lazer. Quer dizer, quase.</h2>
-      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">A piscina de borda infinita do rooftop já foi revelada. As próximas imagens chegam antes, por mensagem, para quem está na lista de interessados.</p>
+      <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">As áreas de lazer foram reveladas.</h2>
+      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">No rooftop, a piscina, o salão de festas e o Salotto Milano. No 3º andar, a academia e o salão de festas infantil.</p>
     </div>
     <div class="lazer-gallery">
       <figure class="reveal-card"><img src="img/piscina-rooftop-curva.webp" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com espreguiçadeiras, cortina d'água e vista aberta para Pelotas" loading="lazy" decoding="async"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
       <figure class="reveal-card mini"><img src="img/piscina-rooftop.webp" alt="Borda da piscina do rooftop ao pôr do sol, com a cidade de Pelotas ao fundo" loading="lazy" decoding="async"><span class="tag">Revelada</span><figcaption class="lbl">A borda ao pôr do sol<small>Perspectiva ilustrativa</small></figcaption></figure>
-      <div class="tease-card"><div class="tease-blur" style="transform:rotate(120deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">Lazer do 3º andar</div></div>
-      <div class="tease-card"><div class="tease-blur" style="transform:rotate(240deg);"></div><span class="tag">Em breve</span><div class="q">?</div><div class="lbl">O que ainda não podemos contar</div></div>
+    </div>
+    <div class="lazer-areas">
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/lazer-salao-festas.webp" alt="Salão de festas do Zabaleta Milano no rooftop, com claraboia redonda, sofás curvos e janelas para a cidade" width="1600" height="822" loading="lazy" decoding="async"><span class="tag">Revelado</span></div>
+        <p class="where">Salão de festas · Rooftop</p>
+        <h3>156 m² no 16º andar, com a piscina do outro lado do vidro.</h3>
+        <p>Recebe mais de 100 pessoas, com cozinha e churrasqueira. As portas de vidro recolhem para dentro das paredes e juntam o salão e a piscina num ambiente só. No teto, uma claraboia inspirada na arquitetura de Milão.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/lazer-salotto-milano.webp" alt="Salotto Milano com lareira revestida em pedra escura, estar com sofás e adega ao fundo" width="1600" height="800" loading="lazy" decoding="async"><span class="tag">Revelado</span></div>
+        <p class="where">Salotto Milano · Rooftop</p>
+        <h3>Lareira, adega, parrilla e forno de pizza na mesma sala.</h3>
+        <p>Pensado para as noites de inverno de Pelotas, com madeira natural e as pedras Forest Brown, Black Moon e Granito Álamo. Projeto da arquiteta Petra Goetzke.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/lazer-academia.webp" alt="Academia do Zabaleta Milano com equipamentos de musculação, piso de madeira e janelas do piso ao teto" width="1600" height="799" loading="lazy" decoding="async"><span class="tag">Revelada</span></div>
+        <p class="where">Academia · 3º andar</p>
+        <h3>108 m² de academia, com a Dom Joaquim na janela.</h3>
+        <p>Pé-direito de 3,40 m e estrutura completa para treinar sem sair de casa.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/lazer-infantil.webp" alt="Salão de festas infantil com árvore cenográfica, casinha de brincar, sofá e simulador de corrida" width="1600" height="800" loading="lazy" decoding="async"><span class="tag">Revelado</span></div>
+        <p class="where">Salão de festas infantil · 3º andar</p>
+        <h3>82 m² para o aniversário das crianças acontecer em casa.</h3>
+        <p>Cozinha e banheiro próprios, simulador de corrida e videogame de última geração. Luz natural e vista para a Dom Joaquim.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
     </div>
     <div class="lazer-gallery-cta">
-      <p>Quando as próximas imagens forem liberadas, a lista recebe primeiro.</p>
-      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20ver%20as%20imagens%20das%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20assim%20que%20forem%20liberadas.">Quero ver as áreas de lazer primeiro</a>
+      <p>Plantas e condições de pré-lançamento chegam primeiro para quem está na lista.</p>
+      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20as%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20plantas%20em%20primeira%20m%C3%A3o.">Quero receber as plantas</a>
     </div>
   </div>
 </section>
