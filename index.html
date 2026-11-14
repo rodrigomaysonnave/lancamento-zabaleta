@@ -200,6 +200,13 @@
   @media (max-width:860px){.lazer-areas{grid-template-columns:1fr;gap:40px;margin-top:40px;}.lazer-area .ph img{aspect-ratio:4/3;}}
   .lazer-gallery-cta{margin-top:34px;text-align:center;}
 
+  /* POPUP DE IMAGEM */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(10,11,14,0.92);display:none;align-items:center;justify-content:center;padding:56px 16px 24px;}
+  .lb.open{display:flex;}
+  .lb img{max-width:min(1200px,100%);max-height:100%;width:auto;height:auto;object-fit:contain;background:#F4F0E7;border-radius:8px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,0.5);}
+  .lb img.pb{filter:grayscale(1);}
+  .lb-close{position:absolute;top:12px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.08);color:#fff;font-size:26px;line-height:1;cursor:pointer;}
+  .lb-cap{position:absolute;top:22px;left:20px;right:70px;color:#F6F2EA;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
   /* COBERTURAS */
   .cob-intro{max-width:680px;margin-bottom:44px;}
   .cob-intro h2{font-size:1.9rem;margin-top:12px;}
@@ -866,5 +873,26 @@
 })();
 </script>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><p class="lb-cap" id="lbCap"></p><button type="button" class="lb-close" id="lbClose" aria-label="Fechar">&times;</button><img id="lbImg" alt=""></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+  function fechar(){lb.classList.remove('open');document.body.style.overflow='';img.removeAttribute('src');}
+  document.querySelectorAll('.cob-planta a').forEach(function(a){
+    a.removeAttribute('target');
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var fig=a.closest('figure'),cob=a.closest('.cob'),t=fig.querySelector('figcaption');
+      var nome=cob?cob.querySelector('h3').textContent:'';
+      img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;
+      img.classList.toggle('pb',!!(cob&&cob.classList.contains('vendida')));
+      cap.textContent=nome+(t?' · '+t.textContent.split(' · ')[0]:'');
+      lb.classList.add('open');document.body.style.overflow='hidden';
+    });
+  });
+  lb.addEventListener('click',function(e){if(e.target!==img)fechar();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))fechar();});
+})();
+</script>
 </body>
 </html>
