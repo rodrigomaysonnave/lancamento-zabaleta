@@ -207,6 +207,43 @@
   .lb img.pb{filter:grayscale(1);}
   .lb-close{position:absolute;top:12px;right:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.08);color:#fff;font-size:26px;line-height:1;cursor:pointer;}
   .lb-cap{position:absolute;top:22px;left:20px;right:70px;color:#F6F2EA;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
+  /* JORNADA DO LANÇAMENTO */
+  .jornada{background:#101216;color:#F6F2EA;}
+  .jor-top{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:end;}
+  .jor-top h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:12px;color:#F6F2EA;}
+  .jor-top p.lead{margin-top:16px;color:#C9C3B5;font-size:0.98rem;max-width:560px;}
+  .jor-count{border:1px solid rgba(201,169,106,0.4);border-radius:12px;padding:22px 24px;background:rgba(201,169,106,0.06);}
+  .jor-count .lbl{font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--champ);}
+  .jor-count .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;}
+  .jor-count .n{text-align:center;background:#16191E;border-radius:8px;padding:12px 4px;}
+  .jor-count .n b{display:block;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1;color:#F6F2EA;font-variant-numeric:tabular-nums;}
+  .jor-count .n span{display:block;margin-top:6px;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:#9B958A;}
+  .jor-count .quando{margin-top:12px;font-size:0.82rem;color:#C9C3B5;}
+  .jor-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;list-style:none;}
+  .jor-step{position:relative;padding:34px 22px 0 0;}
+  .jor-step::before{content:"";position:absolute;top:8px;left:18px;right:0;height:1px;background:rgba(201,169,106,0.35);}
+  .jor-step:last-child::before{display:none;}
+  .jor-step .dot{position:absolute;top:0;left:0;width:17px;height:17px;border-radius:50%;background:#16191E;border:2px solid var(--champ);}
+  .jor-step.feito .dot{background:var(--champ);}
+  .jor-step.agora .dot{background:var(--champ);box-shadow:0 0 0 6px rgba(201,169,106,0.22);}
+  .jor-step .data{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.5rem;color:var(--champ);line-height:1.1;}
+  .jor-step .data small{display:block;margin-top:4px;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#9B958A;}
+  .jor-step h3{font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;margin:14px 0 8px;color:#F6F2EA;}
+  .jor-step p{font-size:0.88rem;color:#C9C3B5;}
+  .jor-step .tag{display:none;margin-top:12px;font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:5px 10px;border-radius:4px;background:rgba(201,169,106,0.18);color:var(--champ);}
+  .jor-step.feito .tag.ok,.jor-step.agora .tag.prox{display:inline-block;}
+  .jor-cta{margin-top:52px;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px 30px;border-radius:12px;background:linear-gradient(135deg,#1E2229,#23262E);border-left:3px solid var(--champ);}
+  .jor-cta p{font-size:0.97rem;color:#D8D2C4;max-width:620px;}
+  .jor-cta p b{color:#F6F2EA;}
+  .jor-cta .btn{flex-shrink:0;}
+  @media (max-width:860px){
+    .jor-top{grid-template-columns:1fr;gap:28px;}
+    .jor-steps{grid-template-columns:1fr;margin-top:40px;}
+    .jor-step{padding:0 0 30px 38px;}
+    .jor-step::before{top:18px;bottom:0;left:8px;right:auto;width:1px;height:auto;}
+    .jor-cta{flex-direction:column;align-items:stretch;padding:24px 20px;margin-top:20px;}
+    .jor-cta .btn{text-align:center;}
+  }
   /* COBERTURAS */
   .cob-intro{max-width:680px;margin-bottom:44px;}
   .cob-intro h2{font-size:1.9rem;margin-top:12px;}
@@ -372,6 +409,39 @@
     <p class="sub">Maioria absoluta dos apartamentos com frente norte, todos com sol garantido. 3 dormitórios, de 112 a 170 m², no Zabaleta Milano, na Av. Dom Joaquim.</p>
   </div>
 </section>
+
+<section class="jornada" id="jornada">
+  <div class="wrap">
+    <div class="jor-top">
+      <div>
+        <p class="eyebrow">A jornada do lançamento</p>
+        <h2>A ordem de escolha das unidades se define no dia 26/11, às 20h.</h2>
+        <p class="lead">No Dia do Pix, a chave sai no Instagram da Zabaleta. O horário do seu Pix, junto com a forma de pagamento, define a sua vez de escolher a unidade no evento de assinaturas.</p>
+      </div>
+      <div class="jor-count" id="jorCount">
+        <p class="lbl" id="jorLbl">Faltam para o Dia do Pix</p>
+        <div class="nums">
+          <div class="n"><b id="jD">--</b><span>dias</span></div>
+          <div class="n"><b id="jH">--</b><span>horas</span></div>
+          <div class="n"><b id="jM">--</b><span>min</span></div>
+          <div class="n"><b id="jS">--</b><span>seg</span></div>
+        </div>
+        <p class="quando" id="jorQuando">Quinta, 26 de novembro, às 20h</p>
+      </div>
+    </div>
+    <ol class="jor-steps">
+      <li class="jor-step feito"><span class="dot"></span><div class="data">Já saiu<small>Book de vendas</small></div><h3>Book de vendas</h3><p>Plantas e informações de cada unidade. Peça o seu pelo WhatsApp.</p><span class="tag ok">Disponível</span></li>
+      <li class="jor-step" data-fim="2026-11-26T20:00:00-03:00"><span class="dot"></span><div class="data">26.11<small>às 20h</small></div><h3>Dia do Pix</h3><p>A chave sai no Instagram da Zabaleta. O horário do seu Pix define sua posição.</p><span class="tag prox">Próxima etapa</span><span class="tag ok">Concluído</span></li>
+      <li class="jor-step" data-fim="2026-11-30T23:59:59-03:00"><span class="dot"></span><div class="data">30.11<small>segunda</small></div><h3>Agendamento</h3><p>A Zabaleta liga para você e marca o seu horário.</p><span class="tag prox">Próxima etapa</span><span class="tag ok">Concluído</span></li>
+      <li class="jor-step" data-fim="2026-12-05T23:59:59-03:00"><span class="dot"></span><div class="data">04 e 05.12<small>sexta e sábado</small></div><h3>Evento de assinaturas</h3><p>Você escolhe a unidade e assina. A vez segue a forma de pagamento e o horário do Pix.</p><span class="tag prox">Próxima etapa</span><span class="tag ok">Concluído</span></li>
+    </ol>
+    <div class="jor-cta">
+      <p><b>Quem chega ao dia 26 com tudo combinado não perde tempo na hora do Pix.</b> Fale comigo antes para receber o book, entender as formas de pagamento e saber exatamente o que fazer às 20h.</p>
+      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20me%20preparar%20para%20o%20Dia%20do%20Pix%20do%20Zabaleta%20Milano%20(26%2F11%20%C3%A0s%2020h)%20e%20receber%20o%20book%20de%20vendas.">Quero me preparar para o Pix</a>
+    </div>
+  </div>
+</section>
+
 
 <section class="section-dark">
   <div class="wrap">
@@ -894,6 +964,36 @@
   });
   lb.addEventListener('click',function(e){if(e.target!==img)fechar();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))fechar();});
+})();
+</script>
+<script>
+(function(){
+  var marcos=[
+    {t:new Date('2026-11-26T20:00:00-03:00'),lbl:'Faltam para o Dia do Pix',q:'Quinta, 26 de novembro, às 20h'},
+    {t:new Date('2026-11-30T09:00:00-03:00'),lbl:'Faltam para o agendamento',q:'Segunda, 30 de novembro'},
+    {t:new Date('2026-12-04T09:00:00-03:00'),lbl:'Faltam para o evento de assinaturas',q:'Sexta e sábado, 04 e 05 de dezembro'}
+  ];
+  var passos=[].slice.call(document.querySelectorAll('.jor-step[data-fim]'));
+  var box=document.getElementById('jorCount');
+  function dois(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var agora=Date.now(),achou=false;
+    passos.forEach(function(p){p.classList.remove('feito','agora');});
+    passos.forEach(function(p){
+      if(new Date(p.getAttribute('data-fim')).getTime()<agora)p.classList.add('feito');
+      else if(!achou){p.classList.add('agora');achou=true;}
+    });
+    var m=null;for(var i=0;i<marcos.length;i++){if(marcos[i].t.getTime()>agora){m=marcos[i];break;}}
+    if(!m){box.style.display='none';return;}
+    var s=Math.floor((m.t.getTime()-agora)/1000);
+    document.getElementById('jD').textContent=Math.floor(s/86400);
+    document.getElementById('jH').textContent=dois(Math.floor(s%86400/3600));
+    document.getElementById('jM').textContent=dois(Math.floor(s%3600/60));
+    document.getElementById('jS').textContent=dois(s%60);
+    document.getElementById('jorLbl').textContent=m.lbl;
+    document.getElementById('jorQuando').textContent=m.q;
+  }
+  tick();setInterval(tick,1000);
 })();
 </script>
 </body>
