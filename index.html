@@ -199,6 +199,48 @@
   .lazer-area .img-caption{margin-top:8px;color:#C9C3B5;}
   @media (max-width:860px){.lazer-areas{grid-template-columns:1fr;gap:40px;margin-top:40px;}.lazer-area .ph img{aspect-ratio:4/3;}}
   .lazer-gallery-cta{margin-top:34px;text-align:center;}
+
+  /* COBERTURAS */
+  .cob-intro{max-width:680px;margin-bottom:44px;}
+  .cob-intro h2{font-size:1.9rem;margin-top:12px;}
+  .cob-intro p{margin-top:12px;font-size:0.95rem;opacity:0.8;}
+  .cob{background:#FDFBF6;border-radius:12px;padding:30px;box-shadow:0 2px 18px rgba(23,26,31,0.08);}
+  .cob + .cob{margin-top:32px;}
+  .cob-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px;}
+  .cob-head h3{font-size:1.4rem;}
+  .cob-head .meta{font-size:0.8rem;color:var(--champ-deep);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:6px;}
+  .cob-status{flex-shrink:0;font-family:'Montserrat',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:8px 14px;border-radius:4px;background:#2F6B4A;color:#fff;}
+  .cob.vendida .cob-status{background:#7A1E26;}
+  .cob-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  .cob-ph{position:relative;margin:0;border-radius:8px;overflow:hidden;background:#E9E3D6;}
+  .cob-ph img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10;}
+  .cob-ph.main{grid-column:span 2;}
+  .cob-ph.main img{aspect-ratio:16/8.4;}
+  .cob-plantas{display:flex;flex-direction:column;gap:12px;}
+  .cob-planta{flex:1;margin:0;background:#F4F0E7;border-radius:8px;padding:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .cob-planta img{max-height:240px;height:auto;width:auto;max-width:100%;object-fit:contain;}
+  .cob-plantas .cob-planta:nth-child(2) img,.cob-plantas .cob-planta:first-child:not(:only-child) img{max-height:120px;}
+  .cob-planta{padding:10px;}
+  .cob-planta a{display:flex;justify-content:center;cursor:zoom-in;}
+  .cob-planta figcaption{margin-top:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.65;}
+  .cob-info{display:flex;flex-direction:column;justify-content:center;padding:6px 6px 6px 10px;}
+  .cob-info p{font-size:0.92rem;opacity:0.82;margin-bottom:16px;}
+  .cob-info .btn{text-align:center;}
+  .cob.vendida img{filter:grayscale(1) contrast(0.95);}
+  .cob.vendida .cob-ph::after,.cob.vendida .cob-planta{position:relative;overflow:hidden;}
+  .cob.vendida .cob-ph::after,.cob.vendida .cob-planta::after{content:"Vendida";position:absolute;top:26px;right:-46px;width:190px;padding:7px 0;transform:rotate(45deg);background:#7A1E26;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;box-shadow:0 4px 14px rgba(0,0,0,0.3);}
+  .cob.vendida .cob-ph.main::after{top:34px;right:-52px;width:230px;padding:10px 0;font-size:0.82rem;}
+  @media (max-width:860px){
+    .cob{padding:20px;}
+    .cob-head{flex-direction:column;gap:10px;}
+    .cob-head h3{font-size:1.2rem;}
+    .cob-grid{grid-template-columns:1fr;}
+    .cob-ph.main{grid-column:auto;}
+    .cob-ph.main img,.cob-ph img{aspect-ratio:4/3;}
+    .cob-info{padding:6px 0 0;}
+    .cob-info .btn{display:block;}
+    .cob-planta img,.cob-plantas .cob-planta:nth-child(2) img,.cob-plantas .cob-planta:first-child:not(:only-child) img{max-height:300px;}
+  }
   .lazer-gallery-cta p{font-size:0.9rem;color:#C9C3B5;margin-bottom:16px;}
 
   /* CONVENIÊNCIAS */
@@ -451,7 +493,7 @@
     <div class="plantas-intro">
       <p class="eyebrow">Plantas em aprovação final</p>
       <h2>As plantas serão reveladas em breve. Quem está na lista vê primeiro.</h2>
-      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Seis tipologias de 3 dormitórios, de 112,51 a 170,43 m², além de duas coberturas exclusivas: uma horizontal de 227 m² e uma duplex de 267 m². O detalhamento final está em aprovação.</p>
+      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Seis tipologias de 3 dormitórios, de 112,51 a 170,43 m², além de duas coberturas exclusivas: uma horizontal de 227 m² e uma duplex de 269 m². O detalhamento final está em aprovação.</p>
     </div>
     <div class="plantas-grid">
       <div class="planta-card">
@@ -486,8 +528,8 @@
         </div>
         <div class="planta-body">
           <h3>Tipologias amplas e coberturas</h3>
-          <p class="meta">163,42 a 170,43 m² · coberturas até 267 m²</p>
-          <p>O topo do edifício e do corredor Dom Joaquim. Duas coberturas: uma horizontal de 227 m², outra duplex de 267 m². Nenhuma igual.</p>
+          <p class="meta">163,42 a 170,43 m² · coberturas até 269 m²</p>
+          <p>O topo do edifício e do corredor Dom Joaquim. Duas coberturas: uma horizontal de 227 m², outra duplex de 269 m². Nenhuma igual.</p>
         </div>
       </div>
     </div>
@@ -495,6 +537,62 @@
       <p>As plantas e condições de pré-lançamento serão enviadas primeiro a quem está na lista.</p>
       <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20receber%20as%20plantas%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20em%20primeira%20m%C3%A3o.">Quero receber as plantas em primeira mão</a>
     </div>
+  </div>
+</section>
+
+<section id="coberturas">
+  <div class="wrap">
+    <div class="cob-intro">
+      <p class="eyebrow">As coberturas</p>
+      <h2>Duas coberturas no Milano. Uma já tem dono.</h2>
+      <p>As imagens e as plantas oficiais das duas unidades do topo do edifício, ambas com elevador privativo.</p>
+    </div>
+
+    <article class="cob">
+      <div class="cob-head">
+        <div>
+          <h3>Cobertura Duplex 1501</h3>
+          <p class="meta">269,54 m² · dois pavimentos · elevador privativo</p>
+        </div>
+        <span class="cob-status">Disponível</span>
+      </div>
+      <div class="cob-grid">
+        <figure class="cob-ph main"><img src="img/cob-duplex-living.webp" alt="Living da Cobertura Duplex 1501 com pé-direito duplo, mezanino, lareira e janelas do piso ao teto" width="1400" height="700" loading="lazy" decoding="async"></figure>
+        <div class="cob-plantas">
+          <figure class="cob-planta"><a href="img/planta-duplex-inferior.webp" target="_blank" rel="noopener"><img src="img/planta-duplex-inferior.webp" alt="Planta humanizada do pavimento inferior da Cobertura Duplex 1501" width="1400" height="1344" loading="lazy" decoding="async"></a><figcaption>Pavimento inferior · toque para ampliar</figcaption></figure>
+          <figure class="cob-planta"><a href="img/planta-duplex-superior.webp" target="_blank" rel="noopener"><img src="img/planta-duplex-superior.webp" alt="Planta humanizada do pavimento superior da Cobertura Duplex 1501" width="1400" height="1152" loading="lazy" decoding="async"></a><figcaption>Pavimento superior · toque para ampliar</figcaption></figure>
+        </div>
+        <figure class="cob-ph"><img src="img/cob-duplex-suite.webp" alt="Suíte da Cobertura Duplex 1501 com closet iluminado" width="1400" height="700" loading="lazy" decoding="async"></figure>
+        <figure class="cob-ph"><img src="img/cob-duplex-banho.webp" alt="Banheiro da suíte master da Cobertura Duplex 1501 com banheira e forro em madeira" width="1400" height="1400" loading="lazy" decoding="async"></figure>
+        <div class="cob-info">
+          <p>Living com pé-direito duplo e escada aberta para o pavimento de cima. A suíte master tem 40,10 m² e banheiro de 11,9 m², com chuveiro duplo e espera para banheira.</p>
+          <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Cobertura%20Duplex%201501%20do%20Zabaleta%20Milano.">Quero conhecer a duplex</a>
+        </div>
+      </div>
+      <p class="img-caption">Perspectivas e plantas ilustrativas</p>
+    </article>
+
+    <article class="cob vendida">
+      <div class="cob-head">
+        <div>
+          <h3>Cobertura Horizontal 1602</h3>
+          <p class="meta">227,06 m² · elevador privativo</p>
+        </div>
+        <span class="cob-status">Vendida</span>
+      </div>
+      <div class="cob-grid">
+        <figure class="cob-ph main"><img src="img/cob-horizontal-living.webp" alt="Living e cozinha integrados da Cobertura Horizontal 1602, vendida" width="1400" height="700" loading="lazy" decoding="async"></figure>
+        <div class="cob-plantas">
+          <figure class="cob-planta"><a href="img/planta-horizontal.webp" target="_blank" rel="noopener"><img src="img/planta-horizontal.webp" alt="Planta humanizada da Cobertura Horizontal 1602, vendida" width="1400" height="678" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+        </div>
+        <figure class="cob-ph"><img src="img/cob-horizontal-estar.webp" alt="Estar da Cobertura Horizontal 1602, vendida" width="1400" height="1400" loading="lazy" decoding="async"></figure>
+        <figure class="cob-ph"><img src="img/cob-horizontal-suite.webp" alt="Closet e suíte da Cobertura Horizontal 1602, vendida" width="1400" height="700" loading="lazy" decoding="async"></figure>
+        <div class="cob-info">
+          <p>Vendida no pré-lançamento. A Cobertura Duplex 1501 é a única cobertura ainda disponível no Milano.</p>
+        </div>
+      </div>
+      <p class="img-caption">Perspectivas e planta ilustrativas</p>
+    </article>
   </div>
 </section>
 
@@ -644,9 +742,9 @@
     <div>
       <p class="eyebrow">Lista de interessados</p>
       <h2>As melhores unidades nunca chegam ao lançamento.</h2>
-      <p>Em todo pré-lançamento, andar alto, posição e cobertura são escolhidos por quem entrou antes. Com apenas duas coberturas e unidades especiais com elevador privativo, a ordem da lista vai importar.</p>
+      <p>Em todo pré-lançamento, andar alto, posição e cobertura são escolhidos por quem entrou antes. Das duas coberturas, uma já foi vendida. Com unidades especiais limitadas, a ordem da lista vai importar.</p>
       <p>O cadastro garante o envio antecipado das plantas, do programa de lazer e das condições de pré-lançamento, sem compromisso de compra.</p>
-      <div class="scarcity">Apenas 2 coberturas · unidades especiais limitadas · atendimento direto com o corretor responsável</div>
+      <div class="scarcity">Resta 1 cobertura · unidades especiais limitadas · atendimento direto com o corretor responsável</div>
     </div>
     <form class="lead-form" id="leadForm">
       <h3>Entrar na lista de interessados</h3>
