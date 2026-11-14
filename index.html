@@ -228,7 +228,9 @@
   .cob-planta img{max-height:240px;height:auto;width:auto;max-width:100%;object-fit:contain;}
   .cob-plantas .cob-planta:nth-child(2) img,.cob-plantas .cob-planta:first-child:not(:only-child) img{max-height:120px;}
   .cob-planta{padding:10px;}
+  .cob-planta{position:relative;cursor:zoom-in;}
   .cob-planta a{display:flex;justify-content:center;cursor:zoom-in;}
+  .cob-planta a::before{content:"";position:absolute;inset:0;z-index:1;}
   .cob-planta figcaption{margin-top:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.65;}
   .cob-info{display:flex;flex-direction:column;justify-content:center;padding:6px 6px 6px 10px;}
   .cob-info p{font-size:0.92rem;opacity:0.82;margin-bottom:16px;}
