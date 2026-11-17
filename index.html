@@ -133,30 +133,9 @@
   .stat-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);color:var(--champ);line-height:1;margin-bottom:10px;}
   .stat-label{font-size:0.86rem;color:#C9C3B5;max-width:230px;}
 
-  /* PLANTAS TEASER */
+  /* PLANTAS */
   .plantas-intro{max-width:680px;margin-bottom:40px;}
   .plantas-intro h2{font-size:1.9rem;margin-top:12px;}
-  .plantas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .planta-card{background:#FDFBF6;border-radius:10px;overflow:hidden;box-shadow:0 2px 14px rgba(23,26,31,0.07);}
-  .planta-visual{position:relative;height:210px;background:#F4F0E7;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-  .planta-visual svg{width:82%;height:auto;filter:blur(7px);opacity:0.5;}
-  .planta-visual .q{
-    position:absolute;width:58px;height:58px;border-radius:50%;
-    background:var(--champ);color:#16191E;display:flex;align-items:center;justify-content:center;
-    font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;
-    box-shadow:0 6px 22px rgba(23,26,31,0.22);
-  }
-  .planta-visual .tag{
-    position:absolute;top:14px;left:14px;background:#16191E;color:#F6F2EA;
-    font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
-    padding:6px 12px;border-radius:4px;
-  }
-  .planta-body{padding:20px 22px 24px;}
-  .planta-body h3{font-size:1.05rem;margin-bottom:4px;}
-  .planta-body .meta{font-size:0.76rem;color:var(--champ-deep);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;}
-  .planta-body p{font-size:0.85rem;opacity:0.75;}
-  .plantas-cta{margin-top:40px;text-align:center;}
-  .plantas-cta p{font-size:0.9rem;opacity:0.75;margin-bottom:16px;}
 
   /* LAZER */
   .lazer-levels{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
@@ -243,6 +222,48 @@
     .jor-step::before{top:18px;bottom:0;left:8px;right:auto;width:1px;height:auto;}
     .jor-cta{flex-direction:column;align-items:stretch;padding:24px 20px;margin-top:20px;}
     .jor-cta .btn{text-align:center;}
+  }
+  /* PLANTAS TIPO */
+  .un-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:24px;}
+  .un-tab{font:inherit;cursor:pointer;background:#FDFBF6;border:1px solid rgba(23,26,31,0.12);border-radius:8px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:3px;color:#16191E;transition:background .2s,border-color .2s;}
+  .un-tab b{font-family:'Montserrat',sans-serif;font-size:0.86rem;font-weight:700;}
+  .un-tab span{font-size:0.74rem;opacity:0.7;}
+  .un-tab:hover{border-color:var(--champ-deep);}
+  .un-tab[aria-selected="true"]{background:#16191E;border-color:#16191E;color:#F6F2EA;}
+  .un-tab[aria-selected="true"] span{opacity:0.85;color:var(--champ);}
+  .un{background:#FDFBF6;border-radius:12px;padding:30px;box-shadow:0 2px 18px rgba(23,26,31,0.08);}
+  .un[hidden]{display:none;}
+  .un-head{margin-bottom:20px;}
+  .un-head h3{font-size:1.4rem;}
+  .un-head .meta{font-size:0.8rem;color:var(--champ-deep);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:6px;}
+  .un-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;}
+  .un-foto{margin:0;border-radius:8px;overflow:hidden;background:#E9E3D6;}
+  .un-foto a{display:block;cursor:zoom-in;height:100%;}
+  .un-foto img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block;}
+  .un-foto.main img{aspect-ratio:16/9.2;}
+  .un-planta{margin:0;background:#F4F0E7;border-radius:8px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .un-planta a{display:flex;justify-content:center;cursor:zoom-in;}
+  .un-planta img{max-height:300px;width:auto;height:auto;max-width:100%;object-fit:contain;}
+  .un-planta figcaption{margin-top:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;opacity:0.65;}
+  .un-fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px;}
+  .un-info{display:flex;flex-direction:column;justify-content:center;gap:16px;padding:6px 6px 6px 10px;}
+  .un-info p{font-size:0.92rem;opacity:0.82;}
+  .un-info .btn{text-align:center;}
+  .un-fotos .un-foto:first-child:nth-last-child(2) + .un-info{grid-column:span 2;}
+  .un-fotos .un-foto:first-child:nth-last-child(4) ~ .un-info{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding:4px 0 0;}
+  .un-fotos .un-foto:first-child:nth-last-child(4) ~ .un-info p{max-width:560px;}
+  .un-fotos .un-foto:first-child:nth-last-child(4) ~ .un-info .btn{flex-shrink:0;}
+  @media (max-width:860px){
+    .un-tabs{grid-template-columns:repeat(3,1fr);gap:8px;}
+    .un{padding:18px;}
+    .un-head h3{font-size:1.2rem;}
+    .un-grid{grid-template-columns:1fr;}
+    .un-foto.main img{aspect-ratio:4/3;}
+    .un-fotos{grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;}
+    .un-fotos .un-foto:first-child:nth-last-child(2n){grid-column:span 2;}
+    .un-fotos .un-foto:first-child:nth-last-child(2n) img{aspect-ratio:16/10;}
+    .un-fotos .un-info,.un-fotos .un-foto:first-child:nth-last-child(2) + .un-info,.un-fotos .un-foto:first-child:nth-last-child(4) ~ .un-info{grid-column:1/-1;flex-direction:column;align-items:stretch;gap:14px;padding:10px 0 0;}
+    .un-info .btn{display:block;}
   }
   /* COBERTURAS */
   .cob-intro{max-width:680px;margin-bottom:44px;}
@@ -355,7 +376,6 @@
     .two-col,.cta-final .wrap{grid-template-columns:1fr;gap:36px;}
     .two-col.reverse .img-col{order:0;}
     .stats{grid-template-columns:1fr 1fr;gap:32px;}
-    .plantas-grid{grid-template-columns:1fr;}
     .lazer-levels{grid-template-columns:1fr;}
     .lazer-gallery{grid-template-columns:1fr;}
     .reveal-card img{aspect-ratio:4/3;}
@@ -661,55 +681,65 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
 
 <div class="name-divider"><img src="img/logo-milano.webp" alt="Zabaleta Milano" width="520" height="621" loading="lazy" decoding="async"><small>Av. Dom Joaquim · Pelotas</small></div>
 
-<section class="section-alt">
+<section class="section-alt" id="plantas">
   <div class="wrap">
     <div class="plantas-intro">
-      <p class="eyebrow">Plantas em aprovação final</p>
-      <h2>As plantas serão reveladas em breve. Quem está na lista vê primeiro.</h2>
-      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">Seis tipologias de 3 dormitórios, de 112,51 a 170,43 m², além de duas coberturas exclusivas: uma horizontal de 227 m² e uma duplex de 269 m². O detalhamento final está em aprovação.</p>
+      <p class="eyebrow">As plantas</p>
+      <h2>Seis plantas de 3 dormitórios. Cada final tem a sua.</h2>
+      <p style="margin-top:12px;font-size:0.95rem;opacity:0.8;">De 111,91 a 169,63 m². Os finais 01 e 02 têm elevador privativo. Escolha um final para ver a planta e as imagens do apartamento decorado.</p>
     </div>
-    <div class="plantas-grid">
-      <div class="planta-card">
-        <div class="planta-visual">
-          <span class="tag">Em breve</span>
-          <svg viewBox="0 0 300 200" fill="none" stroke="#26292E" stroke-width="3"><rect x="10" y="10" width="280" height="180"/><line x1="120" y1="10" x2="120" y2="120"/><line x1="10" y1="120" x2="200" y2="120"/><line x1="200" y1="60" x2="290" y2="60"/><line x1="200" y1="60" x2="200" y2="190"/><rect x="30" y="30" width="40" height="30"/><rect x="220" y="140" width="50" height="30"/></svg>
-          <div class="q">?</div>
-        </div>
-        <div class="planta-body">
-          <h3>Tipologias compactas</h3>
-          <p class="meta">3 dormitórios · 112,51 a 125,08 m²</p>
-          <p>Sacada, living integrado e a face norte, predominante em todo o edifício.</p>
-        </div>
-      </div>
-      <div class="planta-card">
-        <div class="planta-visual">
-          <span class="tag">Em breve</span>
-          <svg viewBox="0 0 300 200" fill="none" stroke="#26292E" stroke-width="3"><rect x="10" y="10" width="280" height="180"/><line x1="150" y1="10" x2="150" y2="190"/><line x1="10" y1="100" x2="150" y2="100"/><line x1="150" y1="70" x2="290" y2="70"/><rect x="40" y="130" width="60" height="35"/><rect x="190" y="110" width="55" height="45"/></svg>
-          <div class="q">?</div>
-        </div>
-        <div class="planta-body">
-          <h3>Tipologias intermediárias</h3>
-          <p class="meta">3 dormitórios · 130,16 a 131,09 m²</p>
-          <p>O meio-termo entre metragem e investimento. Historicamente, as primeiras a esgotar.</p>
-        </div>
-      </div>
-      <div class="planta-card">
-        <div class="planta-visual">
-          <span class="tag">Em breve</span>
-          <svg viewBox="0 0 300 200" fill="none" stroke="#26292E" stroke-width="3"><rect x="10" y="10" width="280" height="180"/><line x1="100" y1="10" x2="100" y2="90"/><line x1="10" y1="90" x2="230" y2="90"/><line x1="230" y1="10" x2="230" y2="190"/><line x1="100" y1="140" x2="230" y2="140"/><rect x="130" y="30" width="70" height="40"/></svg>
-          <div class="q">?</div>
-        </div>
-        <div class="planta-body">
-          <h3>Tipologias amplas e coberturas</h3>
-          <p class="meta">163,42 a 170,43 m² · coberturas até 269 m²</p>
-          <p>O topo do edifício e do corredor Dom Joaquim. Duas coberturas: uma horizontal de 227 m², outra duplex de 269 m². Nenhuma igual.</p>
-        </div>
-      </div>
+    <div class="un-tabs" role="tablist" aria-label="Plantas do Zabaleta Milano">
+      <button type="button" class="un-tab" role="tab" id="tab-f01" aria-controls="un-f01" aria-selected="true"><b>Final 01</b><span>163,94 m²</span></button><button type="button" class="un-tab" role="tab" id="tab-f02" aria-controls="un-f02" aria-selected="false"><b>Final 02</b><span>169,63 m²</span></button><button type="button" class="un-tab" role="tab" id="tab-f03" aria-controls="un-f03" aria-selected="false"><b>Final 03</b><span>134,16 m²</span></button><button type="button" class="un-tab" role="tab" id="tab-f04" aria-controls="un-f04" aria-selected="false"><b>Final 04</b><span>123,65 m²</span></button><button type="button" class="un-tab" role="tab" id="tab-f05" aria-controls="un-f05" aria-selected="false"><b>Final 05</b><span>129,81 m²</span></button><button type="button" class="un-tab" role="tab" id="tab-f06" aria-controls="un-f06" aria-selected="false"><b>Final 06</b><span>111,91 m²</span></button>
     </div>
-    <div class="plantas-cta">
-      <p>As plantas e condições de pré-lançamento serão enviadas primeiro a quem está na lista.</p>
-      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20receber%20as%20plantas%20do%20Zabaleta%20Milano%2C%20na%20Dom%20Joaquim%2C%20em%20primeira%20m%C3%A3o.">Quero receber as plantas em primeira mão</a>
-    </div>
+    <article class="un" id="un-f01" role="tabpanel" aria-labelledby="tab-f01">
+      <div class="un-head"><h3>Final 01</h3><p class="meta">3 dormitórios · 163,94 m² · elevador privativo</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-01-1.webp"><img src="img/final-01-1.webp" alt="Living e jantar integrados do Final 01, com vista da cidade" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-01.webp"><img src="img/planta-final-01.webp" alt="Planta humanizada do Final 01, 163,94 m²" width="1200" height="1135" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-01-2.webp"><img src="img/final-01-2.webp" alt="Estar do Final 01 junto à janela" width="900" height="900" loading="lazy" decoding="async"></a></figure><figure class="un-foto"><a href="img/final-01-3.webp"><img src="img/final-01-3.webp" alt="Suíte do Final 01 com closet" width="900" height="450" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living e jantar integrados, com vidro do piso ao teto. A suíte master tem closet e banheiro com banheira.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2001%20do%20Zabaleta%20Milano%20%28163%2C94%20m%C2%B2%29.">Quero saber do Final 01</a></div></div>
+    </article>
+    <article class="un" id="un-f02" role="tabpanel" aria-labelledby="tab-f02" hidden>
+      <div class="un-head"><h3>Final 02</h3><p class="meta">3 dormitórios · 169,63 m² · elevador privativo</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-02-1.webp"><img src="img/final-02-1.webp" alt="Living e cozinha integrados do Final 02" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-02.webp"><img src="img/planta-final-02.webp" alt="Planta humanizada do Final 02, 169,63 m²" width="1200" height="1112" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-02-2.webp"><img src="img/final-02-2.webp" alt="Jantar do Final 02 com vista da cidade" width="900" height="900" loading="lazy" decoding="async"></a></figure><figure class="un-foto"><a href="img/final-02-3.webp"><img src="img/final-02-3.webp" alt="Closet e suíte do Final 02" width="900" height="450" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>A maior planta tipo do Milano. Living, jantar e cozinha com ilha num só ambiente, e suíte master com closet e banheira.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2002%20do%20Zabaleta%20Milano%20%28169%2C63%20m%C2%B2%29.">Quero saber do Final 02</a></div></div>
+    </article>
+    <article class="un" id="un-f03" role="tabpanel" aria-labelledby="tab-f03" hidden>
+      <div class="un-head"><h3>Final 03</h3><p class="meta">3 dormitórios · 134,16 m²</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-03-1.webp"><img src="img/final-03-1.webp" alt="Living com lareira do Final 03" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-03.webp"><img src="img/planta-final-03.webp" alt="Planta humanizada do Final 03, 134,16 m²" width="1086" height="1200" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-03-2.webp"><img src="img/final-03-2.webp" alt="Cozinha com bancada do Final 03" width="900" height="900" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living com lareira, cozinha com bancada e sacada com espaço para mesa. A suíte master tem banheira.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2003%20do%20Zabaleta%20Milano%20%28134%2C16%20m%C2%B2%29.">Quero saber do Final 03</a></div></div>
+    </article>
+    <article class="un" id="un-f04" role="tabpanel" aria-labelledby="tab-f04" hidden>
+      <div class="un-head"><h3>Final 04</h3><p class="meta">3 dormitórios · 123,65 m²</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-04-1.webp"><img src="img/final-04-1.webp" alt="Living com parede de pedra do Final 04" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-04.webp"><img src="img/planta-final-04.webp" alt="Planta humanizada do Final 04, 123,65 m²" width="1200" height="777" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-04-2.webp"><img src="img/final-04-2.webp" alt="Sacada do Final 04 com vista da cidade" width="900" height="900" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living com parede de pedra e uma sacada ampla, que funciona como mais uma sala.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2004%20do%20Zabaleta%20Milano%20%28123%2C65%20m%C2%B2%29.">Quero saber do Final 04</a></div></div>
+    </article>
+    <article class="un" id="un-f05" role="tabpanel" aria-labelledby="tab-f05" hidden>
+      <div class="un-head"><h3>Final 05</h3><p class="meta">3 dormitórios · 129,81 m²</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-05-1.webp"><img src="img/final-05-1.webp" alt="Living com cozinha do Final 05" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-05.webp"><img src="img/planta-final-05.webp" alt="Planta humanizada do Final 05, 129,81 m²" width="1200" height="1067" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-05-2.webp"><img src="img/final-05-2.webp" alt="Living e jantar do Final 05" width="900" height="900" loading="lazy" decoding="async"></a></figure><figure class="un-foto"><a href="img/final-05-3.webp"><img src="img/final-05-3.webp" alt="Suíte do Final 05 com closet de vidro" width="900" height="900" loading="lazy" decoding="async"></a></figure><figure class="un-foto"><a href="img/final-05-4.webp"><img src="img/final-05-4.webp" alt="Suíte do Final 05 com vista" width="900" height="900" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living e cozinha integrados, sacada com espaço para mesa e suíte master com closet de vidro.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2005%20do%20Zabaleta%20Milano%20%28129%2C81%20m%C2%B2%29.">Quero saber do Final 05</a></div></div>
+    </article>
+    <article class="un" id="un-f06" role="tabpanel" aria-labelledby="tab-f06" hidden>
+      <div class="un-head"><h3>Final 06</h3><p class="meta">3 dormitórios · 111,91 m²</p></div>
+      <div class="un-grid">
+        <figure class="un-foto main"><a href="img/final-06-1.webp"><img src="img/final-06-1.webp" alt="Living com lareira do Final 06" width="1400" height="700" loading="lazy" decoding="async"></a></figure>
+        <figure class="un-planta"><a href="img/planta-final-06.webp"><img src="img/planta-final-06.webp" alt="Planta humanizada do Final 06, 111,91 m²" width="861" height="1200" loading="lazy" decoding="async"></a><figcaption>Planta · toque para ampliar</figcaption></figure>
+      </div>
+      <div class="un-fotos"><figure class="un-foto"><a href="img/final-06-2.webp"><img src="img/final-06-2.webp" alt="Living e cozinha do Final 06" width="900" height="900" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living com lareira e cozinha com ilha voltada para a sala.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2006%20do%20Zabaleta%20Milano%20%28111%2C91%20m%C2%B2%29.">Quero saber do Final 06</a></div></div>
+    </article>
+    <p class="img-caption">Perspectivas e plantas ilustrativas</p>
   </div>
 </section>
 
@@ -832,8 +862,8 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
       </figure>
     </div>
     <div class="lazer-gallery-cta">
-      <p>Plantas e condições de pré-lançamento chegam primeiro para quem está na lista.</p>
-      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20as%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20plantas%20em%20primeira%20m%C3%A3o.">Quero receber as plantas</a>
+      <p>As condições de pré-lançamento chegam primeiro para quem está na lista.</p>
+      <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20as%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es%20do%20pr%C3%A9-lan%C3%A7amento.">Quero receber as condições</a>
     </div>
   </div>
 </section>
@@ -916,7 +946,7 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
       <p class="eyebrow">Lista de interessados</p>
       <h2>As melhores unidades nunca chegam ao lançamento.</h2>
       <p>Em todo pré-lançamento, andar alto, posição e cobertura são escolhidos por quem entrou antes. Das duas coberturas, uma já foi vendida. Com unidades especiais limitadas, a ordem da lista vai importar.</p>
-      <p>O cadastro garante o envio antecipado das plantas, do programa de lazer e das condições de pré-lançamento, sem compromisso de compra.</p>
+      <p>O cadastro garante o envio antecipado das condições de pré-lançamento, sem compromisso de compra.</p>
       <div class="scarcity">Resta 1 cobertura · unidades especiais limitadas · atendimento direto com o corretor responsável</div>
     </div>
     <form class="lead-form" id="leadForm">
@@ -1044,11 +1074,11 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
 (function(){
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
   function fechar(){lb.classList.remove('open');document.body.style.overflow='';img.removeAttribute('src');}
-  document.querySelectorAll('.cob-planta a').forEach(function(a){
+  document.querySelectorAll('.cob-planta a,.un-planta a,.un-foto a').forEach(function(a){
     a.removeAttribute('target');
     a.addEventListener('click',function(e){
       e.preventDefault();
-      var fig=a.closest('figure'),cob=a.closest('.cob'),t=fig.querySelector('figcaption');
+      var fig=a.closest('figure'),cob=a.closest('.cob,.un'),t=fig.querySelector('figcaption');
       var nome=cob?cob.querySelector('h3').textContent:'';
       img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;
       img.classList.toggle('pb',!!(cob&&cob.classList.contains('vendida')));
@@ -1058,6 +1088,14 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
   });
   lb.addEventListener('click',function(e){if(e.target!==img)fechar();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))fechar();});
+})();
+</script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.un-tab'));
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(o){var on=o===b;o.setAttribute('aria-selected',on?'true':'false');document.getElementById(o.getAttribute('aria-controls')).hidden=!on;});
+  });});
 })();
 </script>
 <script>
