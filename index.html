@@ -265,6 +265,46 @@
     .un-fotos .un-info,.un-fotos .un-foto:first-child:nth-last-child(2) + .un-info,.un-fotos .un-foto:first-child:nth-last-child(4) ~ .un-info{grid-column:1/-1;flex-direction:column;align-items:stretch;gap:14px;padding:10px 0 0;}
     .un-info .btn{display:block;}
   }
+  /* GALERIAS */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px;}
+  .gal-2{grid-template-columns:repeat(2,1fr);}
+  .gal-5{grid-template-columns:repeat(5,1fr);}
+  .gal figure{margin:0;}
+  .gal a{display:block;border-radius:8px;overflow:hidden;cursor:zoom-in;background:#E9E3D6;}
+  .gal img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease;}
+  .gal a:hover img{transform:scale(1.04);}
+  .gal figcaption{margin-top:7px;font-size:0.74rem;letter-spacing:0.03em;opacity:0.72;}
+  .section-dark .gal a{background:#20242B;}
+  .section-dark .gal figcaption{color:#C9C3B5;opacity:1;}
+  .section-dark .gal-2 img{aspect-ratio:16/9;}
+  .two-col .gal img{height:auto;border-radius:0;}
+  .gal-mini{margin-top:12px;gap:12px;}
+  .gal-plantas a,.gal-mini figure:last-child a{background:#F4F0E7;}
+  .gal-mini figure:last-child img{object-fit:contain;padding:8px;}
+  .gal-plantas img{object-fit:contain;padding:10px;}
+  .gal-titulo{font-size:1.05rem;margin:48px 0 4px;}
+  .section-dark .gal-titulo{color:#F6F2EA;}
+  .pav{margin-top:8px;}
+  .garagem{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:center;margin-top:28px;}
+  .garagem .gal{margin-top:0;}
+  .garagem-txt h4{font-family:'Montserrat',sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:8px;}
+  .garagem-txt p{font-size:0.9rem;opacity:0.8;margin-bottom:8px;}
+  .garagem-txt p.img-caption{font-size:0.72rem;margin-top:4px;}
+  .mapa{margin:28px auto 0;max-width:760px;}
+  .mapa a{display:block;cursor:zoom-in;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 14px rgba(23,26,31,0.07);}
+  .mapa img{display:block;width:100%;height:auto;}
+  .mapa figcaption{margin-top:8px;font-size:0.78rem;opacity:0.7;text-align:center;}
+  .obras{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:18px;}
+  .obras figure{margin:0;}
+  .obras img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:8px;}
+  .obras figcaption{margin-top:7px;font-size:0.76rem;line-height:1.35;opacity:0.8;}
+  .obras figcaption b{display:block;font-weight:600;}
+  @media (max-width:860px){
+    .gal,.gal-5{grid-template-columns:repeat(2,1fr);gap:10px;}
+    .gal-titulo{margin-top:36px;}
+    .garagem{grid-template-columns:1fr;gap:16px;}
+    .obras{grid-template-columns:repeat(3,1fr);gap:12px;}
+  }
   /* COBERTURAS */
   .cob-intro{max-width:680px;margin-bottom:44px;}
   .cob-intro h2{font-size:1.9rem;margin-top:12px;}
@@ -579,6 +619,7 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
         <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20a%20fachada%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20pr%C3%B3ximas%20imagens.">Quero as próximas imagens</a>
       </div>
     </div>
+    <div class="gal gal-2"><figure class="zoom"><a href="img/fachada-entardecer.webp"><img src="img/fachada-entardecer-t.webp" alt="Torre do Zabaleta Milano ao entardecer, vista de frente a partir da Avenida Dom Joaquim" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Ao entardecer</figcaption></figure><figure class="zoom"><a href="img/fachada-sacadas-noite.webp"><img src="img/fachada-sacadas-noite-t.webp" alt="Sacadas curvas do Zabaleta Milano iluminadas à noite, com a cidade ao fundo" width="640" height="320" loading="lazy" decoding="async"></a><figcaption>As sacadas à noite</figcaption></figure></div>
   </div>
 </section>
 
@@ -619,13 +660,16 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
         <p>As vidraças vão do piso ao teto e fazem dos 550 m² de jardim uma extensão visual do hall. Quem chega em casa atravessa o verde com os olhos antes de chamar o elevador.</p>
       </div>
     </div>
+    <div class="gal gal-2"><figure class="zoom"><a href="img/hall-estar.webp"><img src="img/hall-estar-t.webp" alt="Estar do hall de entrada com sofás e escultura entre as colunas" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Estar do hall</figcaption></figure><figure class="zoom"><a href="img/hall-vista-jardim.webp"><img src="img/hall-vista-jardim-t.webp" alt="Hall de entrada com vidraças do piso ao teto abertas para o jardim" width="640" height="320" loading="lazy" decoding="async"></a><figcaption>O hall e o jardim</figcaption></figure></div>
   </div>
 </section>
 
 <section class="section-alt">
   <div class="wrap two-col reverse">
     <div class="img-col">
-      <img src="img/area-verde-parque.webp" alt="Caminho arborizado em área verde privativa do empreendimento" loading="lazy" decoding="async">
+      <img src="img/jardim-por-do-sol.webp" alt="Jardim do Zabaleta Milano ao pôr do sol, com caminho de pedrisco, escultura e a fachada de vidro ao lado" width="1600" height="800" loading="lazy" decoding="async">
+      <div class="gal gal-2 gal-mini"><figure class="zoom"><a href="img/jardim-escultura.webp"><img src="img/jardim-escultura-t.webp" alt="Escultura e caminho iluminado no jardim do Zabaleta Milano" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>A escultura do jardim</figcaption></figure><figure class="zoom"><a href="img/pav-terreo.webp"><img src="img/pav-terreo-t.webp" alt="Planta do pavimento térreo com o jardim, o hall de entrada e as garagens" width="700" height="295" loading="lazy" decoding="async"></a><figcaption>O jardim na planta do térreo</figcaption></figure></div>
+      <p class="img-caption">Perspectivas ilustrativas</p>
     </div>
     <div>
       <p class="eyebrow">Diferencial exclusivo</p>
@@ -674,6 +718,10 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
         <div class="entrega-card"><h4>Piscina aquecida</h4><p>A piscina de borda infinita do rooftop é aquecida, para aproveitar além do verão.</p></div>
         <div class="entrega-card"><h4>Gerador de energia</h4><p>O condomínio terá gerador próprio, para mais segurança quando faltar luz.</p></div>
         <div class="entrega-card"><h4>Pronto para carro elétrico</h4><p>As vagas terão espera para carregador de veículo elétrico.</p></div>
+      </div>
+      <div class="garagem">
+        <div class="gal gal-2"><figure class="zoom"><a href="img/garagem-entrada.webp"><img src="img/garagem-entrada-t.webp" alt="Entrada da garagem com forro de madeira e linhas de luz no teto" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Entrada da garagem</figcaption></figure><figure class="zoom"><a href="img/garagem-vagas.webp"><img src="img/garagem-vagas-t.webp" alt="Vagas da garagem com piso epóxi e iluminação embutida" width="640" height="319" loading="lazy" decoding="async"></a><figcaption>As vagas</figcaption></figure></div>
+        <div class="garagem-txt"><h4>Garagem com piso epóxi e projeto de luz</h4><p>As garagens serão entregues com piso epóxi e projeto luminotécnico próprio. É o ambiente que se usa todo dia, e foi desenhado com o mesmo cuidado do hall.</p><p class="img-caption">Perspectivas ilustrativas</p></div>
       </div>
     </div>
   </div>
@@ -739,6 +787,10 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
       </div>
       <div class="un-fotos"><figure class="un-foto"><a href="img/final-06-2.webp"><img src="img/final-06-2.webp" alt="Living e cozinha do Final 06" width="900" height="900" loading="lazy" decoding="async"></a></figure><div class="un-info"><p>Living com lareira e cozinha com ilha voltada para a sala.</p><a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Final%2006%20do%20Zabaleta%20Milano%20%28111%2C91%20m%C2%B2%29.">Quero saber do Final 06</a></div></div>
     </article>
+    <div class="pav">
+      <h3 class="gal-titulo">O edifício, andar por andar</h3>
+      <div class="gal gal-4 gal-plantas"><figure class="zoom"><a href="img/pav-terreo.webp"><img src="img/pav-terreo-t.webp" alt="Planta do pavimento térreo: hall de entrada, jardim e garagens" width="700" height="295" loading="lazy" decoding="async"></a><figcaption>Térreo · hall, jardim e garagens</figcaption></figure><figure class="zoom"><a href="img/pav-3-andar.webp"><img src="img/pav-3-andar-t.webp" alt="Planta do 3º pavimento: academia, salão de festas infantil, pet spa e garagens" width="700" height="332" loading="lazy" decoding="async"></a><figcaption>3º andar · academia, salão infantil e pet spa</figcaption></figure><figure class="zoom"><a href="img/pav-tipo.webp"><img src="img/pav-tipo-t.webp" alt="Planta do pavimento tipo, do 5º ao 15º andar" width="700" height="448" loading="lazy" decoding="async"></a><figcaption>Pavimento tipo · 5º ao 15º andar</figcaption></figure><figure class="zoom"><a href="img/pav-rooftop.webp"><img src="img/pav-rooftop-t.webp" alt="Planta do rooftop: salão de festas, gourmet externo, piscina, Salotto Milano e as duas coberturas" width="700" height="445" loading="lazy" decoding="async"></a><figcaption>Rooftop · lazer e coberturas</figcaption></figure></div>
+    </div>
     <p class="img-caption">Perspectivas e plantas ilustrativas</p>
   </div>
 </section>
@@ -825,7 +877,7 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
     <div style="margin-top:72px;">
       <p class="eyebrow">Galeria do Zabaleta Milano</p>
       <h2 style="font-size:1.7rem;max-width:640px;margin-top:12px;">As áreas de lazer foram reveladas.</h2>
-      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">No rooftop, a piscina, o salão de festas e o Salotto Milano. No 3º andar, a academia e o salão de festas infantil.</p>
+      <p style="max-width:600px;margin-top:14px;color:#C9C3B5;font-size:0.95rem;">No rooftop, a piscina, o salão de festas, o gourmet externo e o Salotto Milano. No 3º andar, a academia, o salão de festas infantil e o pet spa.</p>
     </div>
     <div class="lazer-gallery">
       <figure class="reveal-card"><img src="img/piscina-rooftop-curva.webp" alt="Piscina de borda infinita no rooftop do Zabaleta Milano ao pôr do sol, com espreguiçadeiras, cortina d'água e vista aberta para Pelotas" loading="lazy" decoding="async"><span class="tag">Revelada</span><figcaption class="lbl">Piscina aquecida de 15 m de borda infinita · Rooftop, 16º pavimento<small>Perspectiva ilustrativa</small></figcaption></figure>
@@ -860,7 +912,24 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
         <p>Cozinha e banheiro próprios, simulador de corrida e videogame de última geração. Luz natural e vista para a Dom Joaquim.</p>
         <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
       </figure>
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/gourmet-mesas.webp" alt="Gourmet externo no rooftop ao pôr do sol, com mesas postas, balcão de bar e janelas para a cidade" width="1600" height="800" loading="lazy" decoding="async"><span class="tag">Revelado</span></div>
+        <p class="where">Gourmet externo · Rooftop</p>
+        <h3>Bar, lareira e mesas de frente para o pôr do sol.</h3>
+        <p>Fica no 16º andar, junto da piscina e do salão de festas. Balcão de bar, mesas para jantar e uma lareira para as noites frias.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
+      <figure class="lazer-area">
+        <div class="ph"><img src="img/pet-spa.webp" alt="Pet spa do Zabaleta Milano com bancada de banho, escada de acesso para o animal e nichos iluminados em arco" width="1561" height="1600" loading="lazy" decoding="async"><span class="tag">Revelado</span></div>
+        <p class="where">Pet spa · 3º andar</p>
+        <h3>Banho e secagem do pet sem sair do prédio.</h3>
+        <p>Estrutura profissional para banho e secagem, com bancada e escada de acesso para o animal subir sozinho.</p>
+        <figcaption class="img-caption">Perspectiva ilustrativa</figcaption>
+      </figure>
     </div>
+    <h3 class="gal-titulo">Mais imagens do lazer</h3>
+    <div class="gal gal-5"><figure class="zoom"><a href="img/piscina-borda.webp"><img src="img/piscina-borda-t.webp" alt="Piscina de borda infinita no rooftop com a cidade ao fundo" width="640" height="320" loading="lazy" decoding="async"></a><figcaption>Piscina · borda infinita</figcaption></figure><figure class="zoom"><a href="img/piscina-deck.webp"><img src="img/piscina-deck-t.webp" alt="Deck de madeira da piscina com espreguiçadeira e vista da cidade" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Piscina · deck</figcaption></figure><figure class="zoom"><a href="img/gourmet-bar.webp"><img src="img/gourmet-bar-t.webp" alt="Balcão de bar do gourmet externo com lareira e vista do rooftop" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Gourmet externo · bar</figcaption></figure><figure class="zoom"><a href="img/salao-mesa-posta.webp"><img src="img/salao-mesa-posta-t.webp" alt="Mesa redonda posta no salão de festas do rooftop" width="639" height="640" loading="lazy" decoding="async"></a><figcaption>Salão de festas · mesa posta</figcaption></figure><figure class="zoom"><a href="img/salao-jantar.webp"><img src="img/salao-jantar-t.webp" alt="Jantar no salão de festas do rooftop" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Salão de festas · jantar</figcaption></figure><figure class="zoom"><a href="img/salotto-poltronas.webp"><img src="img/salotto-poltronas-t.webp" alt="Poltronas e lenha no Salotto Milano" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Salotto Milano · estar</figcaption></figure><figure class="zoom"><a href="img/salotto-lareira.webp"><img src="img/salotto-lareira-t.webp" alt="Lareira do Salotto Milano" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Salotto Milano · lareira</figcaption></figure><figure class="zoom"><a href="img/academia-esteira.webp"><img src="img/academia-esteira-t.webp" alt="Esteiras da academia com janelas para a Dom Joaquim" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Academia · esteiras</figcaption></figure><figure class="zoom"><a href="img/infantil-arvore.webp"><img src="img/infantil-arvore-t.webp" alt="Salão infantil com árvore cenográfica e TV" width="640" height="320" loading="lazy" decoding="async"></a><figcaption>Salão infantil · árvore</figcaption></figure><figure class="zoom"><a href="img/infantil-bolinhas.webp"><img src="img/infantil-bolinhas-t.webp" alt="Piscina de bolinhas no salão de festas infantil" width="640" height="640" loading="lazy" decoding="async"></a><figcaption>Salão infantil · bolinhas</figcaption></figure></div>
+    <p class="img-caption" style="color:#C9C3B5;margin-top:10px;">Perspectivas ilustrativas</p>
     <div class="lazer-gallery-cta">
       <p>As condições de pré-lançamento chegam primeiro para quem está na lista.</p>
       <a class="btn" href="https://wa.me/5553981041499?text=Ol%C3%A1%2C%20vi%20as%20%C3%A1reas%20de%20lazer%20do%20Zabaleta%20Milano%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es%20do%20pr%C3%A9-lan%C3%A7amento.">Quero receber as condições</a>
@@ -880,6 +949,7 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
       </picture>
       <figcaption class="img-caption">A Dom Joaquim vista do Milano · Perspectiva ilustrativa</figcaption>
     </figure>
+    <figure class="zoom mapa"><a href="img/mapa-dom-joaquim.webp"><img src="img/mapa-dom-joaquim-t.webp" alt="Mapa da Avenida Dom Joaquim com o Zabaleta Milano e os pontos de interesse do entorno: mercados, bancos, escolas, academias, restaurantes e outros edifícios da Zabaleta" width="899" height="900" loading="lazy" decoding="async"></a><figcaption>O Milano e os pontos de interesse da Dom Joaquim · toque para ampliar</figcaption></figure>
     <div class="conv-grid">
       <div class="conv-card"><div class="ic">Saúde</div><h3>Moinho Office</h3><p>Complexo de consultórios médicos e centros de estética na própria avenida.</p></div>
       <div class="conv-card"><div class="ic">Bancos</div><h3>Caixa, Sicredi, Sicoob e Cresol</h3><p>Quatro instituições financeiras na extensão da Dom Joaquim.</p></div>
@@ -924,8 +994,12 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
       <h2>Comprar na planta é comprar a entrega. Aqui, ela tem 44 anos de histórico.</h2>
       <p>A Construtora Zabaleta ergue Pelotas desde 1982: dos edifícios neoclássicos que marcaram a arquitetura da cidade à nova geração contemporânea, de fachadas em ACM e pele de vidro, que este empreendimento representa.</p>
       <p>É também uma das poucas construtoras da região certificadas <b>Great Place to Work</b>, entre as melhores empresas para se trabalhar no Rio Grande do Sul. Obra boa começa em equipe que fica.</p>
-      <p>Neste momento de pré-lançamento, o cadastro na lista não envolve compromisso de compra: envolve prioridade. Plantas, programa de lazer e condições chegam primeiro para quem já está dentro.</p>
+      <p>Neste momento de pré-lançamento, o cadastro na lista não envolve compromisso de compra: envolve prioridade. As condições chegam primeiro para quem já está dentro.</p>
     </div>
+  </div>
+  <div class="wrap">
+    <h3 class="gal-titulo">Obras da Zabaleta em Pelotas, de 1989 a 2026</h3>
+    <div class="obras"><figure><img src="img/obra-1989.webp" alt="Edifício Sevilha, da Construtora Zabaleta, de 1989" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Sevilha</b>1989</figcaption></figure><figure><img src="img/obra-1994.webp" alt="Edifício Monte Carlo, da Construtora Zabaleta, de 1994" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Monte Carlo</b>1994</figcaption></figure><figure><img src="img/obra-1997.webp" alt="Edifício Leonardo da Vinci, da Construtora Zabaleta, de 1997" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Leonardo da Vinci</b>1997</figcaption></figure><figure><img src="img/obra-1999.webp" alt="Edifício Golden Park, da Construtora Zabaleta, de 1999" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Golden Park</b>1999</figcaption></figure><figure><img src="img/obra-2002.webp" alt="Edifício Mônaco, da Construtora Zabaleta, de 2002" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Mônaco</b>2002</figcaption></figure><figure><img src="img/obra-2004.webp" alt="Edifício Versailles, da Construtora Zabaleta, de 2004" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Versailles</b>2004</figcaption></figure><figure><img src="img/obra-2007.webp" alt="Edifício Parthenon, da Construtora Zabaleta, de 2007" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Parthenon</b>2007</figcaption></figure><figure><img src="img/obra-2010.webp" alt="Edifício Green Park, da Construtora Zabaleta, de 2010" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Green Park</b>2010</figcaption></figure><figure><img src="img/obra-2017.webp" alt="Edifício Central Park, da Construtora Zabaleta, de 2017" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Central Park</b>2017</figcaption></figure><figure><img src="img/obra-2021.webp" alt="Edifício Royal Park, da Construtora Zabaleta, de 2021" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Royal Park</b>2021</figcaption></figure><figure><img src="img/obra-2025.webp" alt="Edifício Miguel Zabaleta, da Construtora Zabaleta, de 2025" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Miguel Zabaleta</b>2025</figcaption></figure><figure><img src="img/obra-2026.webp" alt="Edifício Zabaleta Office, da Construtora Zabaleta, de 2026" width="420" height="420" loading="lazy" decoding="async"><figcaption><b>Zabaleta Office</b>2026</figcaption></figure></div>
   </div>
 </section>
 
@@ -1074,15 +1148,16 @@ enviar('formulario', f.getAttribute('aria-label') || f.id || 'Formulário');
 (function(){
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
   function fechar(){lb.classList.remove('open');document.body.style.overflow='';img.removeAttribute('src');}
-  document.querySelectorAll('.cob-planta a,.un-planta a,.un-foto a').forEach(function(a){
+  document.querySelectorAll('.cob-planta a,.un-planta a,.un-foto a,.zoom a').forEach(function(a){
     a.removeAttribute('target');
     a.addEventListener('click',function(e){
       e.preventDefault();
       var fig=a.closest('figure'),cob=a.closest('.cob,.un'),t=fig.querySelector('figcaption');
-      var nome=cob?cob.querySelector('h3').textContent:'';
+      var partes=[];if(cob)partes.push(cob.querySelector('h3').textContent);
+      if(t)partes.push(cob?t.textContent.split(' · ')[0]:t.textContent.replace(' · toque para ampliar',''));
       img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;
       img.classList.toggle('pb',!!(cob&&cob.classList.contains('vendida')));
-      cap.textContent=nome+(t?' · '+t.textContent.split(' · ')[0]:'');
+      cap.textContent=partes.length?partes.join(' · '):img.alt;
       lb.classList.add('open');document.body.style.overflow='hidden';
     });
   });
